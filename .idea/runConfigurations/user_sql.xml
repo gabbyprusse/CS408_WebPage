@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="user.sql" type="DatabaseScript" editBeforeRun="true" singleton="false" nameIsGenerated="true">
+    <script-file value="$PROJECT_DIR$/user.sql" />
+    <script-mode>FILE</script-mode>
+    <data-source id="065ccf56-120d-46c8-8d42-beaa50a05fe0" />
+    <data-source id="1e8a7ee6-03f3-44c9-a67a-fab913e6dd9c" />
+    <method v="2" />
+  </configuration>
+</component>

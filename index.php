@@ -22,7 +22,7 @@
         </li>
 
         <li><a href="NewUser.html">Create Profile</a></li>
-        <li><a href="AboutGabby.html">About Gabby</a></li>
+        <li><a href="AboutGabby.php">About Gabby</a></li>
     </ul>
     </ul>
   
