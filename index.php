@@ -30,7 +30,8 @@
   
 
   <footer>
-      <p>Author: Queen Gabby Prusse</p>
+      <p>Here is the end of the page</p>
+      <p>Author: Gabby Prusse</p>
   </footer>
 
 </body>

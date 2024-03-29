@@ -16,5 +16,29 @@
     <mapping uuid="4bcfc7d8-9c92-43cf-9ba6-84c8d43f8c0b" name="db@localhost Mapping">
       <data-sources db="1e8a7ee6-03f3-44c9-a67a-fab913e6dd9c" ddl="81028527-d7a2-4097-8c70-f6e2b1ef3ec5" />
     </mapping>
+    <mapping uuid="b1d7e856-f0ad-4c79-9e3c-5abccbb7f978" name="@localhost Mapping [3]">
+      <data-sources db="9fc86fcf-0bb4-4f31-8ae1-ed04f85bcecf" ddl="6a72a2bd-06ad-479a-9595-90a50c1d3e8d" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="6a72a2bd-06ad-479a-9595-90a50c1d3e8d" />
+          <option name="name" value="@localhost (DDL)" />
+          <option name="dbmsName" value="MYSQL" />
+          <option name="urls">
+            <array />
+          </option>
+          <option name="outLayout" value="File per object by schema and database.groovy" />
+          <option name="scriptOptions">
+            <map>
+              <entry key="CreateIfNotExists" value="1" />
+              <entry key="CreateOrReplace" value="1" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
   </component>
 </project>

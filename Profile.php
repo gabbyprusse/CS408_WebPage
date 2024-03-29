@@ -28,6 +28,23 @@
   </ul>
 
   <! ACTUAL CONTENT >
+  <?php
+  require_once "Dao.php";
+
+  $dao = new Dao();
+
+  setcookie("usertoken", "noice");
+
+
+  if(isset($_COOKIE["visits"])) {
+      $cookie = $_COOKIE["visits"];
+      echo "number of visits: {$cookie}";
+      setcookie("visits", $cookie + 1);
+  } else {
+      setcookie("visits", 1);
+  }
+
+  ?>
   <form>
     <br>
     <label for="user">Username:</label><br>
@@ -42,8 +59,10 @@
   </form>
 
   <! FOOTER >
+
   <footer>
-    <p>Author: Queen Gabby Prusse</p>
+      <p>Here is the end of the page</p>
+    <p>Author: Gabby Prusse</p>
   </footer>
 
 </body>
