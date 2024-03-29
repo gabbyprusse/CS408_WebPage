@@ -20,25 +20,4 @@
       <data-sources db="9fc86fcf-0bb4-4f31-8ae1-ed04f85bcecf" ddl="6a72a2bd-06ad-479a-9595-90a50c1d3e8d" />
     </mapping>
   </component>
-  <component name="SqlDataSourceStorage">
-    <option name="dataSources">
-      <list>
-        <State>
-          <option name="id" value="6a72a2bd-06ad-479a-9595-90a50c1d3e8d" />
-          <option name="name" value="@localhost (DDL)" />
-          <option name="dbmsName" value="MYSQL" />
-          <option name="urls">
-            <array />
-          </option>
-          <option name="outLayout" value="File per object by schema and database.groovy" />
-          <option name="scriptOptions">
-            <map>
-              <entry key="CreateIfNotExists" value="1" />
-              <entry key="CreateOrReplace" value="1" />
-            </map>
-          </option>
-        </State>
-      </list>
-    </option>
-  </component>
 </project>

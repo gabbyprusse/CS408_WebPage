@@ -1,6 +1,13 @@
 
-<?php require_once "header.php"; ?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Running for NonRunners</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="About.css">
+</head>
 <body>
+<?php require_once "header.php"; ?>
 <h1 class="benefits">Benefits of Running</h1>
 <p>
     Running offers a multitude of benefits for both physical and mental health. Here are some of them: <br>

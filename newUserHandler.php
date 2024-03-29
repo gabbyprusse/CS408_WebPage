@@ -28,22 +28,19 @@ if(0 == strlen($location)) {
     $messages[] = "please tell me where you are";
 }
 
+if(!isset($_POST['goal'])){
+    $messages[] = "please choose a goal distance";
+}
+
 if(!isset($_POST['level'])){
-    $messages[] = "please enter your experience level";
+    $messages[] = "please specify your level";
 }
 
-if(0 == strlen($goal)) {
-    $messages[] = "please enter your goal";
-}
-
-if($goal > 10) {
-    $messages[] = "please enter a realistic goal";
-}
 
 if (0 < count($messages)) {
     $_SESSION['messages'] = $messages;
     $_SESSION['inputs'] = $_POST;
-    header("Location: http://localhost/black_market/comments.php");
+    header("Location: http://localhost/cs408_webdev/comments.php");
     exit();
 }
 
@@ -54,5 +51,5 @@ $_SESSION['sentiment'] = "good";
 $messages[] = "Thanks for the comment!";
 $_SESSION['messages'] = $messages;
 
-header("Location: http://localhost/black_market/comments.php");
+header("Location: http://localhost/cs408_webdev/comments.php");
 exit();
