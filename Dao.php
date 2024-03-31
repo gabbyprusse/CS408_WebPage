@@ -1,16 +1,27 @@
 <?php
 
 require_once '../KLogger.php';
-
-class Dao
-{
-
-    public $filename;
-    private $host = "localhost";
-    private $db = "first";
-    private $user = "root";
-    private $pass = "root";
+    //$filename;
+    $dsn = "mysql:dbname=first;host=127.0.0.1";
+    $db = "first";
+    $user = "root";
+    $pass = "root";
     //protected KLogger $logger;
+
+
+    try {
+        $dbh = new PDO($dsn, $user, $pass);
+        echo "Connected";
+    } catch
+    (PDOException $e) {
+        echo "Connection failed" . $e->getMessage();
+    }
+
+    try {
+        $dbh->query("select monday, tuesday, wednesday, thurday, friday, saturday, sunday from plan1 order by desc ")
+    } catch (Exception $e) {
+
+    }
 
 
     public function getConnection()

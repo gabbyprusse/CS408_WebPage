@@ -17,7 +17,7 @@
         <label for="pswd">Password:</label><br>
         <input type="password" id="pswd" name="pswd" placeholder="shhhhhh"><br><br
 
-
+<form action="formhandler.php" method="post">
         <p>
         <label for="goal">How far do you want to run?</label> <br>
             <input type="radio" id="1mi" name="goal" value="1mi" />
@@ -28,7 +28,7 @@
 
             <input type="radio" id="10k" name="goal" value="10k" />
             <label for="10k">10k (6ish miles)</label> <br>
-
+</form>
         <p>
             <input type="submit" value="Create Profile">
         </p>
