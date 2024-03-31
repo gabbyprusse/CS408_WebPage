@@ -15,21 +15,8 @@
         <input type="text" id="user" name="user" placeholder="applesauce"><br>
 
         <label for="pswd">Password:</label><br>
-        <input type="password" id="pswd" name="pswd" placeholder="shhhhhh"><br><br>
+        <input type="password" id="pswd" name="pswd" placeholder="shhhhhh"><br><br
 
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="location" placeholder="Boise, ID"><br>
-
-
-        <p>
-        <label for="level">How many miles can you run?</label><br>
-        <select name="level" id="level">
-            <option value="" disabled selected hidden>Select</option>
-            <option value="no_experience">No Experience (>1 miles)</option>
-            <option value="beginner">Beginner (1-2 miles)</option>
-            <option value="intermediate">Intermediate (3+ miles)</option>
-        </select>
-        </p>
 
         <p>
         <label for="goal">How far do you want to run?</label> <br>

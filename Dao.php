@@ -6,19 +6,19 @@ class Dao
 {
 
     public $filename;
-
     private $host = "localhost";
-    private $db = "gabbyprusse";
-    private $user = "gabbyprusse";
-    private $pass = "password";
-    protected KLogger $logger;
+    private $db = "first";
+    private $user = "root";
+    private $pass = "root";
+    //protected KLogger $logger;
+
 
     public function getConnection()
     {
         $this->logger->LogDebug("getting a connection...");
 
         return
-            new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
+            new PDO("mysql:host={$this->host};db={$this->db}", $this->user,
                 $this->pass);
     }
 
