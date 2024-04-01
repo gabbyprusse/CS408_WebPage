@@ -1,6 +1,6 @@
 <?php
     require_once "confiSession.php";
-    require_once "view.php";
+    require_once "NUview.php";
 ?>
 <html lang="en">
     <head>

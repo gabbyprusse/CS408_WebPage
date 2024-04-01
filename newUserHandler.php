@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
 
         require_once "dbh.php";
-        require_once "model.php";
-        require_once "control.php";
+        require_once "NUmodel.php";
+        require_once "NUcontrol.php";
 
         // ERROR HANDLERS
         $errors = [];
