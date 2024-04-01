@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_unset();
 session_destroy();
-header("Location: http://localhost/black_market/login.php");
+header("Location: ../main.php");
 exit();

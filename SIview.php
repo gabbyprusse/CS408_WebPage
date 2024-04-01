@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+function outputUsername() {
+    if (isset($_SESSION["userId"])) {
+        echo "Welcome, " . $_SESSION["user_username"];
+    } else {
+        echo "Please log in or create a profile";
+    }
+}
 function check_login_errors() {
     if (isset($_SESSION['errors_login']))
     {
