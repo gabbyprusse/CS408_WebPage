@@ -8,25 +8,4 @@
       </scope>
     </mapping>
   </component>
-  <component name="SqlDataSourceStorage">
-    <option name="dataSources">
-      <list>
-        <State>
-          <option name="id" value="3fe84543-e030-4b94-9015-0e17a01eb8f8" />
-          <option name="name" value="first@localhost (DDL)" />
-          <option name="dbmsName" value="MYSQL" />
-          <option name="parent" value="b731eb6b-a7c7-451a-9cd4-284bc1c0c259" />
-          <option name="urls">
-            <array />
-          </option>
-          <option name="outLayout" value="File per object by schema.groovy" />
-          <option name="scopes">
-            <map>
-              <entry key="" value="" />
-            </map>
-          </option>
-        </State>
-      </list>
-    </option>
-  </component>
 </project>
