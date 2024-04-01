@@ -23,8 +23,6 @@
     <label for="pswd">Password:</label><br>
     <input type="text" id="pswd" name="pswd" value=""><br><br>
 
-    <input type="submit" value="Create Profile"><br><br>
-
     <input type="submit" value="Login"><br><br>
   </form>
 
