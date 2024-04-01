@@ -14,7 +14,7 @@
     <?php require_once "header.php"; ?>
 
     <! ACTUAL CONTENT >
-    <form action="formhandler.php" method="post">
+    <form action="newUserHandler.php" method="post">
         <label for="user">Username:</label><br>
         <input type="text" id="user" name="user" placeholder="applesauce"><br>
 
@@ -31,9 +31,16 @@
 
                 <input type="radio" id="10k" name="goal" value="10k" />
                 <label for="10k">10k (6ish miles)</label> <br>
-            <p>
-                <input type="submit" value="Create Profile">
-            </p>
+
+    </form>
+
+    <form action="newUserHandler.php" method="post">
+        <?php
+            //signUpInputs();
+        ?>
+        <p>
+            <input type="submit" value="Create Profile">
+        </p>
     </form>
 
     <?php

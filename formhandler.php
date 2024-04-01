@@ -24,20 +24,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($errors) {
             $_SESSION["errors_signUp"] = $errors;
+
+            $signUpData = [
+                "username" => $user
+            ];
+            $_SESSION["signUp_data"] = $errors;
+
             header("Location: ../NewUser.php");
+            die();
         }
 
-        $query = "INSERT INTO users (username, pwd) VALUES (?, ?, ?)";
+        createUser($user, $pwd);
 
-        $stmt = $pdo->prepare($query);
-
-        $stmt->execute([$user, $pwd]);
+        header("Location: ../NewUser.php?signup=success");
 
         $pdo = null;
         $stmt = null;
 
-        header("Location: ../NewUser.php");
-        exit();
+        die();
     }
     catch (PDOException $e)
     {
@@ -45,4 +49,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     header("Location: ../NewUser.php");
+    die();
 }
