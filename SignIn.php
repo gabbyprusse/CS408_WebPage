@@ -21,7 +21,7 @@
     <input type="text" id="user" name="user" value=""><br>
 
     <label for="pswd">Password:</label><br>
-    <input type="text" id="pswd" name="pswd" value=""><br><br>
+    <input type="password" id="pswd" name="pswd" value=""><br><br>
 
     <input type="submit" value="Login"><br><br>
   </form>
