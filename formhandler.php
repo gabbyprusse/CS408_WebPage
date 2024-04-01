@@ -6,7 +6,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pwd = $_POST["pwd"];
 
     try {
+
         require_once "dbh.php";
+        require_once "model.php";
+        require_once "control.php";
+
+        // ERROR HANDLERS
+        $errors = [];
+        if (input_empty($user, $pwd)){
+            $errors["emptyInput"] = "Fill in all fields";
+        }
+        if (used_username($pdo, $user)) {
+            $errors["usedUsername"] = "Username already taken";
+        }
+
+        require_once "confiSession.php";
+
+        if ($errors) {
+            $_SESSION["errors_signUp"] = $errors;
+            header("Location: ../NewUser.php");
+        }
 
         $query = "INSERT INTO users (username, pwd) VALUES (?, ?, ?)";
 

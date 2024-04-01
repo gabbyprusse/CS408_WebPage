@@ -2,9 +2,11 @@
 
 <?php
 
-    $dsn = "mysql:host=localhost;dbname=first";
-    $user = "gabbyprusse";
-    $pwd = "gabby";
+    $dsn = 'mysql:host=localhost;dbname=first';
+    $host = 'localhost';
+    $dbname = 'first';
+    $user = 'gabbyprusse';
+    $pwd = 'gabby';
 
     // connects to database
     try {

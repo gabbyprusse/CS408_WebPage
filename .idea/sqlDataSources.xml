@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DdlMappings">
-    <mapping uuid="69ed4af6-f515-4db1-96fc-7b9e45d29a9c" name="@localhost Mapping">
-      <data-sources db="065ccf56-120d-46c8-8d42-beaa50a05fe0" />
+    <mapping uuid="0d655e2e-40c1-45dc-b184-3dad3658b754" name="first@localhost Mapping">
+      <data-sources db="b731eb6b-a7c7-451a-9cd4-284bc1c0c259" ddl="3fe84543-e030-4b94-9015-0e17a01eb8f8" />
       <scope>
         <node kind="database" negative="1" />
       </scope>
     </mapping>
-    <mapping uuid="4815a508-8e5a-484c-acce-b2fc48be5425" name="@localhost Mapping [2]">
-      <data-sources db="34455b96-0804-4c3d-a880-6b0777af888e" ddl="7b1f16fa-9721-419b-867e-cf15db86de1d" />
-      <scope>
-        <node kind="database" negative="1" />
-      </scope>
-    </mapping>
-    <mapping uuid="4bcfc7d8-9c92-43cf-9ba6-84c8d43f8c0b" name="db@localhost Mapping">
-      <data-sources db="1e8a7ee6-03f3-44c9-a67a-fab913e6dd9c" ddl="81028527-d7a2-4097-8c70-f6e2b1ef3ec5" />
-    </mapping>
-    <mapping uuid="b1d7e856-f0ad-4c79-9e3c-5abccbb7f978" name="@localhost Mapping [3]">
-      <data-sources db="9fc86fcf-0bb4-4f31-8ae1-ed04f85bcecf" ddl="6a72a2bd-06ad-479a-9595-90a50c1d3e8d" />
-    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="3fe84543-e030-4b94-9015-0e17a01eb8f8" />
+          <option name="name" value="first@localhost (DDL)" />
+          <option name="dbmsName" value="MYSQL" />
+          <option name="parent" value="b731eb6b-a7c7-451a-9cd4-284bc1c0c259" />
+          <option name="urls">
+            <array />
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+          <option name="scopes">
+            <map>
+              <entry key="" value="" />
+            </map>
+          </option>
+        </State>
+      </list>
+    </option>
   </component>
 </project>

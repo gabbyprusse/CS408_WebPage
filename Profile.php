@@ -9,24 +9,7 @@
 <body>
 <?php require_once "header.php"; ?>
 
-  <! ACTUAL CONTENT >
-  <?php
-  require_once "Dao.php";
 
-  $dao = new Dao();
-
-  setcookie("usertoken", "noice");
-
-
-  if(isset($_COOKIE["visits"])) {
-      $cookie = $_COOKIE["visits"];
-      echo "number of visits: {$cookie}";
-      setcookie("visits", $cookie + 1);
-  } else {
-      setcookie("visits", 1);
-  }
-
-  ?>
   <form>
     <br>
     <label for="user">Username:</label><br>
