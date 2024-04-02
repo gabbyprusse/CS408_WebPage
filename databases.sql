@@ -28,6 +28,7 @@ CREATE TABLE 5k (
     sunday VARCHAR(100) NOT NULL,
     PRIMARY KEY (id)
 );
+
 CREATE TABLE 10k (
     id int(11) NOT NULL AUTO_INCREMENT,
     monday VARCHAR(100) NOT NULL,

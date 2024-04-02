@@ -4,5 +4,3 @@ CREATE TABLE users (
     created_at datetime not null default current_date,
     primary key (id)
     );
-
-)

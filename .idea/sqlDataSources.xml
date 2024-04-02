@@ -5,21 +5,4 @@
       <data-sources db="a7dcb39d-e448-4f4d-b66f-082f21d9d7a4" />
     </mapping>
   </component>
-  <component name="SqlDataSourceStorage">
-    <option name="dataSources">
-      <list>
-        <State>
-          <option name="id" value="1cae7523-f360-472d-b069-b39524156f16" />
-          <option name="name" value="@localhost (DDL)" />
-          <option name="dbmsName" value="MYSQL" />
-          <option name="urls">
-            <array>
-              <option value="file://$PROJECT_DIR$/databases.sql" />
-            </array>
-          </option>
-          <option name="outLayout" value="File per object by schema.groovy" />
-        </State>
-      </list>
-    </option>
-  </component>
 </project>
