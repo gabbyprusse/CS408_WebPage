@@ -4,5 +4,13 @@
     <mapping uuid="5751a6a2-36a5-4ee1-b8f5-5a5fc1483ecd" name="DDL Mapping">
       <data-sources db="a7dcb39d-e448-4f4d-b66f-082f21d9d7a4" />
     </mapping>
+    <mapping uuid="b10a21eb-949a-46cb-b312-272543240320" name="info@localhost Mapping">
+      <data-sources db="db325dc3-5590-4a66-93bb-80ca20f06dee" ddl="1fe4c7e3-524f-47fe-833e-45adfef28fa7" />
+      <scope>
+        <node kind="database" negative="1">
+          <node kind="schema" negative="1" />
+        </node>
+      </scope>
+    </mapping>
   </component>
 </project>

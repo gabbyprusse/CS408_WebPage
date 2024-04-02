@@ -14,7 +14,7 @@ function getUsername(object $pdo, string $user) {
 
 
 function setUser(object $pdo, string $user, string $pwd, int $goal) {
-    $query = "INSERT INTO users (user, pwd, goal) VALUES (:username, :pwd, :goal);";
+    $query = "INSERT INTO users (username, pwd, goal) VALUES (:username, :pwd, :goal);";
     $stmt = $pdo->prepare($query);
 
     $options = [

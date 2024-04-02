@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="abeb139a-c266-489b-8df2-925a04c16334" name="mamp" url="http://localhost:8888/">
-        <fileTransfer mountedRoot="$USER_HOME$/Desktop/localhost_8888 _ localhost _ first _ phpMyAdmin 5.2.0_files" accessType="MOUNT" port="0" />
+      <webServer id="f40092a8-d249-4d24-a51e-e31b4ed582f3" name="MAMP Apache" url="http://localhost:8888">
+        <fileTransfer mountedRoot="/Applications/MAMP/htdocs" accessType="MOUNT" port="0" />
       </webServer>
     </option>
   </component>

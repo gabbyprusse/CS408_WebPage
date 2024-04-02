@@ -1,4 +1,3 @@
-// database handler
 
 <?php
 
