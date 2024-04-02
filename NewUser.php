@@ -18,8 +18,8 @@
         <label for="user">Username:</label><br>
         <input type="text" id="user" name="user" placeholder="applesauce"><br>
 
-        <label for="pswd">Password:</label><br>
-        <input type="password" id="pswd" name="pswd" placeholder="shhhhhh"><br><br
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd" placeholder="shhhhhh"><br><br
 
             <p>
             <label for="goal">How far do you want to run?</label> <br>
