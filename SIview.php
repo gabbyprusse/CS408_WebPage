@@ -4,14 +4,16 @@ declare(strict_types=1);
 error_reporting(-1);
 ini_set('display_errors', 'On');
 
-function outputUsername() {
+function outputUsername(): void
+{
     if (isset($_SESSION["userId"])) {
         echo "Welcome, " . $_SESSION["user_username"];
     } else {
         echo "Please log in or create a profile";
     }
 }
-function check_login_errors() {
+function check_login_errors(): void
+{
     if (isset($_SESSION['errors_login']))
     {
         $errors = $_SESSION['errors_login'];

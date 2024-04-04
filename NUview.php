@@ -15,7 +15,8 @@ ini_set('display_errors', 'On');
 //    }
 //}
 
-function check_signup_errors() {
+function check_signup_errors(): void
+{
     if (isset($_SESSION['errors']))
     {
         $errors = $_SESSION['errors'];
