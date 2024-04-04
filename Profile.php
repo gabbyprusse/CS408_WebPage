@@ -9,7 +9,7 @@
 
 <?php require_once "header.php"; ?>
 
-<div class="welcome">
+<div>
     <h1>Welcome, here is your running plan!</h1>
 </div>
 
