@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="About.css">
 </head>
 <body>
-<?php require_once "header.php"; ?>
+<?php require_once "header.php";
+
+error_reporting(-1);
+ini_set('display_errors', 'On'); ?>
 <h1 class="benefits">Benefits of Running</h1>
 <p>
     Running offers a multitude of benefits for both physical and mental health. Here are some of them: <br>

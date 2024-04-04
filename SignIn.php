@@ -12,6 +12,9 @@
     require_once "confiSession.php";
     require_once "NUview.php";
     require_once "SIview.php";
+
+error_reporting(-1);
+ini_set('display_errors', 'On');
 ?>
 
 

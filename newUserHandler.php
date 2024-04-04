@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(-1);
+ini_set('display_errors', 'On');
+
 // submitting to users database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];

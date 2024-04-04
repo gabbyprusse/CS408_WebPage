@@ -16,3 +16,6 @@
         <li><a href="NewUser.php">Create Profile</a></li>
         <li><a href="About.php">About Gabby</a></li>
     </ul>
+  <?php
+  error_reporting(-1);
+  ini_set('display_errors', 'On'); ?>

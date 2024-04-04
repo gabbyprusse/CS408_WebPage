@@ -1,6 +1,8 @@
 <?php
     require_once "confiSession.php";
     require_once "NUview.php";
+error_reporting(-1);
+ini_set('display_errors', 'On');
 ?>
 <html lang="en">
     <head>
