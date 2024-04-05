@@ -2,6 +2,11 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 session_start();
+require_once "dbh.php";
+require_once "SImodel.php";
+require_once "SIcontrol.php";
+require_once "Dao.php";
+
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -9,10 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pwd = $_POST["pwd"];
 
     try {
-        require_once "dbh.php";
-        require_once "SImodel.php";
-        require_once "SIcontrol.php";
-
+        $dao = new Dao();
+        $dao->getConnection();
         // ERROR HANDLERS
         $errors = [];
 
@@ -20,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["emptyInput"] = "Fill in all fields";
         }
 
-        $result = getUser($pdo, $user);
+        $result = getUser($dao, $user);
 
         // if user exits, does pwd match
         if (validateUsername($result)) {
