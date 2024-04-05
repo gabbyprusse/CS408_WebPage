@@ -8,7 +8,7 @@ h1 {
 }
 
 img {
-    text-align: right;
+    float: right;
 }
 ul {
     font-family: Didot, serif;
