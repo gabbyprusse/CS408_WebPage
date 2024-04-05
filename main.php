@@ -13,7 +13,7 @@
     ?>
     <h3>Starting a running routine when you're new to running can be both exciting and challenging.
     Here's a step-by-step guide to help you get started safely and effectively.</h3>
-    <h5>This website is intended for beginner runners with little to no experience.</h5>
+    <h5>Intended for beginner runners with little to no experience.</h5>
     <ol>
         <li class="steps"> <strong>Be Patient and Consistent:</strong> Remember that progress takes time, so be patient with yourself.
             Celebrate your achievements along the way, no matter how small, and stay consistent with
