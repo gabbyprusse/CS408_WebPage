@@ -32,10 +32,16 @@ a {
     color: #885c39;
 }
 
+h3, h4, h5 {
+    color: lightcoral;
+    text-align: center;
+}
+
 footer {
     font-family: Didot, serif;
     text-align: center;
     padding: 3px;
+    margin: 10px;
     background-color: #eae3d3;
     color: #FEFEFE;
 }
