@@ -8,17 +8,20 @@ h1 {
     color: #885c39;
 }
 
-
-ul.MainPage {
+img {
+    float: right;
+}
+ul {
     font-family: Didot, serif;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
     overflow: hidden;
     background-color:#fef2ec ;
 }
 
 li {
     font-family: Didot, serif;
+    margin: 10px;
     float: left;
     color: #885c39;
     display: block;
