@@ -31,7 +31,7 @@
             your runs as your fitness improves.</li>
         <li class="steps"><strong>Find a Good Playlist/Podcast:</strong> Listening to music or a podcast can help stay motivated during a run. The audio
         can aid in taking your mind off of how much longer or further you have left to go. </li>
-        <li><strong>Warm Up and Cool Down:</strong> Before each run, spend a few minutes warming up with dynamic stretches like leg swings,
+        <li class="steps"><strong>Warm Up and Cool Down:</strong> Before each run, spend a few minutes warming up with dynamic stretches like leg swings,
             arm circles, and hip rotations. After your run, take time to cool down with static stretches to prevent muscle stiffness and
             reduce the risk of injury.</li>
         <li class="steps"><strong>Find a Routine:</strong> Establish a consistent running schedule that works for your lifestyle. Whether it's early
