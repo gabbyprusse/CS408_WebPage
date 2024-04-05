@@ -1,16 +1,18 @@
 body {
+    font-family: Didot, serif;
     color: #885c39;
-}
-body {
     background-color: #FEFEFE;
 }
+
 h1 {
+    font-family: Didot, serif;
     margin: 30px;
     color: #885c39;
 }
 
 
 ul.MainPage {
+    font-family: Didot, serif;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -18,6 +20,7 @@ ul.MainPage {
 }
 
 li {
+    font-family: Didot, serif;
     float: left;
     color: #885c39;
     display: block;
@@ -27,20 +30,23 @@ li {
 
 
 a {
+    font-family: Didot, serif;
     color: #885c39;
 }
 
 
 p {
-    margin
-    : 20px
+    font-family: Didot, serif;
+    margin: 20px
 }
 
 strong, .benefits, .profileTitle {
+    font-family: Didot, serif;
     color: lightcoral;
 }
 
 footer {
+    font-family: Didot, serif;
     text-align: center;
     padding: 3px;
     background-color: #eae3d3;

@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<?php require_once "header.php";
+<?php
+require_once "header.php";
+require_once "dbh.php";
 error_reporting(-1);
 ini_set('display_errors', 'On');
 ?>
