@@ -2,6 +2,9 @@
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
+require_once "dbh.php";
+require_once "NUmodel.php";
+require_once "NUcontrol.php";
 
 // submitting to users database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -10,10 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $goal = $_POST["goal"];
 
     try {
-
-        require_once "dbh.php";
-        require_once "NUmodel.php";
-        require_once "NUcontrol.php";
 
         // ERROR HANDLERS
         $errors = [];
