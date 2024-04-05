@@ -42,5 +42,7 @@
             Fuel your body with nutritious foods to support your energy levels and recovery.</li>
     </ul>
 
+<h4>By following these steps and listening to your body, you can start running with confidence and gradually build your endurance and fitness level.</h4>
+
 </body>
 </html>
