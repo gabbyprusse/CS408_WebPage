@@ -3,7 +3,7 @@
 declare(strict_types=1);
 error_reporting(-1);
 ini_set('display_errors', 'On');
-require_once "NUmodel.php";
+
 
 function input_empty(string $user, string $pwd, $goal): bool
 {
@@ -25,5 +25,6 @@ function used_username(object $pdo, string $user): bool
 
 function createUser(string $user, string $pwd, int $goal): void
 {
+    require_once "NUmodel.php";
     set_user();
 }
