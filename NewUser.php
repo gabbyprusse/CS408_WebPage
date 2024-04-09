@@ -25,13 +25,13 @@ ini_set('display_errors', 'On');
 
             <p>
             <label for="goal">How far do you want to run?</label> <br>
-                <input type="radio" id="1mi" name="goal" value="1mi" />
+                <input type="radio" id="1" name="goal" value="1" />
                 <label for="1mi">1 mile</label> <br>
 
-                <input type="radio" id="5k" name="goal" value="5k" />
+                <input type="radio" id="2" name="goal" value="2" />
                 <label for="5k">5k (3ish miles)</label> <br>
 
-                <input type="radio" id="10k" name="goal" value="10k" />
+                <input type="radio" id="3" name="goal" value="3" />
                 <label for="10k">10k (6ish miles)</label> <br>
         <p>
             <input type="submit" value="Create Profile">
