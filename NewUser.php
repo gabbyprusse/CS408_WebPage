@@ -17,8 +17,8 @@ ini_set('display_errors', 'On');
 
     <! ACTUAL CONTENT >
     <form action="newUserHandler.php" method="post">
-        <label for="user">Username:</label><br>
-        <input type="text" id="user" name="user" placeholder="applesauce"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="applesauce"><br>
 
         <label for="pwd">Password:</label><br>
         <input type="password" id="pwd" name="pwd" placeholder="shhhhhh"><br><br
@@ -33,13 +33,6 @@ ini_set('display_errors', 'On');
 
                 <input type="radio" id="10k" name="goal" value="10k" />
                 <label for="10k">10k (6ish miles)</label> <br>
-
-    </form>
-
-    <form action="newUserHandler.php" method="post">
-        <?php
-            //signUpInputs();
-        ?>
         <p>
             <input type="submit" value="Create Profile">
         </p>
