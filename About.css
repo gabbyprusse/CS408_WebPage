@@ -33,9 +33,11 @@ li.steps {
     margin: 20px;
 }
 
-a {
+a, p {
     color: #885c39;
 }
+
+
 
 h3, h4, h5 {
     margin: 20px;
