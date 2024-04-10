@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 
 require_once 'Dao.php';
 
-$dao = new Dao();
+
 
 function input_empty(string $user, string $pwd, $goal): bool
 {
@@ -19,7 +19,8 @@ function input_empty(string $user, string $pwd, $goal): bool
 
 function used_username($user): bool
 {
-    if ($dao->getUsername($user) != null) {
+    $dao = new Dao();
+    if ($dao->getUsername($user) == null) {
         return true;
     } else {
        return false;
