@@ -61,6 +61,7 @@ table {
 th, td {
     font-family: Didot, serif;
     padding: 15px;
+    margin-left: 15px;
     text-align: left;
     color: #885c39;
 }

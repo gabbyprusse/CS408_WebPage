@@ -22,6 +22,7 @@ ini_set('display_errors', 'On');
 <table id="plan">
     <thead>
     <tr>
+        <th>Week</th>
         <th>Monday</th>
         <th>Tuesday</th>
         <th>Wednesday</th>
@@ -36,9 +37,14 @@ ini_set('display_errors', 'On');
     $dao->getConnection();
     $lines = $dao->getPlan($_SESSION["user_username"]);
     foreach ($lines as $line) {
-        echo "<tr><td>{$line['monday']}</td><td>{$line['tuesday']}</td><td>{$line['wednesday']}</td>
-            <td>{$line['thursday']}</td><td>{$line['friday']}</td><td>{$line['saturday']}</td>
-            <td>{$line['sunday']}</td></tr>";
+        echo "<tr><td>{$line['id']}</td>
+        <td>{$line['monday']}</td>
+        <td>{$line['tuesday']}</td>
+        <td>{$line['wednesday']}</td>
+        <td>{$line['thursday']}</td>
+        <td>{$line['friday']}</td>
+        <td>{$line['saturday']}</td>
+        <td>{$line['sunday']}</td></tr>";
     }
 
     ?>
