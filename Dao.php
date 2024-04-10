@@ -21,13 +21,14 @@ class Dao
     /*
      * sets the user by adding them to database
      */
-    function setUser(object $pdo, string $user, string $pwd, int $goal): void
+    function setUser(string $user, string $pwd, int $goal): void
     {
+        $conn = $this->getConnection();
         $query = "INSERT INTO users 
             (username, pwd, goal) 
         VALUES
             (:username, :pwd, :goal);";
-        $stmt = $pdo->prepare($query);
+        $stmt = $conn->prepare($query);
 
         $options = [
             'cost' => 12
@@ -43,9 +44,10 @@ class Dao
     /*
      * gets user and all their info
      */
-    function getUser(object $pdo, string $user) {
+    function getUser(string $user) {
+        $conn = $this->getConnection();
         $query = "SELECT * FROM users WHERE username = :username;";
-        $stmt = $pdo->prepare($query);
+        $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
         $stmt->execute();
 
@@ -56,9 +58,10 @@ class Dao
     /*
      * gets the user's username
      */
-    function getUsername(object $pdo, string $user) {
+    function getUsername(string $user) {
+        $conn = $this->getConnection();
         $query = "SELECT username FROM users WHERE username = :username;";
-        $stmt = $pdo->prepare($query);
+        $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
         $stmt->execute();
 
@@ -69,9 +72,15 @@ class Dao
     /*
      * gets the plan of the user based on their intended running goal
      */
-    public function getPlan($goal)
+    public function getPlan($user)
     {
         $conn = $this->getConnection();
+        $query = "SELECT goal FROM users WHERE username = :username;";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":username", $user);
+        $stmt->execute();
+
+        $goal = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($goal == 1) {
             $dist = "1mi";
         } else if ($goal == 2) {
@@ -82,18 +91,6 @@ class Dao
         return $conn->query("SELECT monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    /*
-     * gets the running goal of the user
-     */
-    function getGoal(object $pdo, string $user) {
-        $query = "SELECT goal FROM users WHERE username = :username;";
-        $stmt = $pdo->prepare($query);
-        $stmt->bindParam(":username", $user);
-        $stmt->execute();
-
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result;
-    }
 }
 
 //    public function getGoods () {
