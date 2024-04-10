@@ -88,7 +88,7 @@ class Dao
         } else {
             $dist = "10k";
         }
-        return $conn->query("SELECT monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
+        return $conn->query("SELECT * FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
 
 }
