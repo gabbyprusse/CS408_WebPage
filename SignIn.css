@@ -44,6 +44,11 @@ h3, h4, h5 {
     text-align: center;
 }
 
+form {
+    color: #f59a9a;
+    margin-left: 50px;
+}
+
 footer {
     font-family: Didot, serif;
     text-align: center;
