@@ -19,7 +19,7 @@ function input_empty(string $user, string $pwd, $goal): bool
 
 function used_username($user): bool
 {
-    if ($dao->getUsername($user)) {
+    if ($dao->getUsername($user) != null) {
         return true;
     } else {
        return false;
