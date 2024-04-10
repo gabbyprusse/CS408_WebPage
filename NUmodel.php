@@ -16,10 +16,12 @@ function getUsername(object $pdo, string $user) {
     return $result;
 }
 
-
 function setUser(object $pdo, string $user, string $pwd, int $goal): void
 {
-    $query = "INSERT INTO users (username, pwd, goal) VALUES (:username, :pwd, :goal);";
+    $query = "INSERT INTO users 
+            (username, pwd, goal) 
+        VALUES
+            (:username, :pwd, :goal);";
     $stmt = $pdo->prepare($query);
 
     $options = [
