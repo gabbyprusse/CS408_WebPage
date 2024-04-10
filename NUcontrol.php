@@ -6,6 +6,7 @@ ini_set('display_errors', 'On');
 
 require_once 'Dao.php';
 
+$dao = new Dao();
 
 function input_empty(string $user, string $pwd, $goal): bool
 {
@@ -16,17 +17,12 @@ function input_empty(string $user, string $pwd, $goal): bool
     }
 }
 
-function used_username(object $pdo, string $user): bool
+function used_username($user): bool
 {
-    if (getUsername($pdo, $user)) {
+    if ($dao->getUsername($user)) {
         return true;
     } else {
        return false;
     }
 }
 
-function createUser(string $user, string $pwd, int $goal): void
-{
-    require_once "NUmodel.php";
-    set_user();
-}

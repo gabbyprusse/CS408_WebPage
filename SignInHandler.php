@@ -2,7 +2,7 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 session_start();
-require_once "dbh.php";
+
 require_once "SIcontrol.php";
 require_once "Dao.php";
 
@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];
     $pwd = $_POST["pwd"];
 
+    $dao = new Dao();
+
     try {
-        $dao = new Dao();
-        $dao->getConnection();
         // ERROR HANDLERS
         $errors = [];
 
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["emptyInput"] = "Fill in all fields";
         }
 
-        $result = getUser($dao, $user);
+        $result = $dao->getUser($user);
 
         // if user exits, does pwd match
         if (validateUsername($result)) {
@@ -48,8 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_id($sessionId);
 
         $_SESSION["userId"] = $result["id"];
-        $_SESSION["user_username"] = htmlspecialchars($result["username"],
-            ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401);
+        $_SESSION["user_username"] = htmlspecialchars($result["username"], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401);
 
         $_SESSION["last_regeneration"] = time();
 
