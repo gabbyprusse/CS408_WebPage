@@ -1,6 +1,7 @@
 <?php
 
-class Dao {
+class Dao
+{
 
     public $filename;
 
@@ -9,13 +10,26 @@ class Dao {
     private $user = "root";
     private $pass = "root";
 
-    public function getConnection(): PDO
+    public function getConnection()
     {
         //$this->logger->LogDebug("getting a connection...");
+        return new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
+            $this->pass);
+    }
 
-        return
-            new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
-                $this->pass);
+
+    public function getPlan($goal)
+    {
+        $conn = $this->getConnection();
+        $dist = null;
+        if ($goal == 1) {
+            $dist = "1mi";
+        } else if ($goal == 2) {
+            $dist = "5k";
+        } else {
+            $dist = "10k";
+        }
+        return $conn->query("SELECT monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

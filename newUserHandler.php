@@ -2,15 +2,20 @@
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
-require_once "dbh.php";
-require_once "NUmodel.php";
-require_once "NUcontrol.php";
+require_once 'dbh.php';
+require_once 'Dao.php';
+require_once 'NUmodel.php';
+require_once 'NUcontrol.php';
 
 // submitting to users database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $_POST["username"];
     $pwd = $_POST["pwd"];
     $goal = $_POST["goal"];
+
+    $pdo = new Dao();
+    $pdo->getConnection();
+
 
     try {
 
@@ -38,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die();
         }
 
-        createUser($user, $pwd, $goal);
+        setUser($pdo, $user, $pwd, $goal);
 
         header("Location: ../NewUser.php?signup=success");
 
