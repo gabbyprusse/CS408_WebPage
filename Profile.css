@@ -69,13 +69,13 @@ th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: lightcoral;
+    background-color: #f59a9a;
     color: mistyrose;
 }
 
 tr:nth-child(even){background-color: mistyrose;}
 
-tr:hover {background-color: lightpink;}
+tr:hover {background-color: #f3b9b4;}
 
 h2 {
     font-family: Didot, serif;
