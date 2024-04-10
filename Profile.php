@@ -15,7 +15,7 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 ?>
 <div>
-    <h1>Welcome, here is your running plan!</h1>
+    <h1>Welcome<?php $_SESSION["user_username"]?>, here is your running plan!</h1>
 </div>
 
 <table id="plan">
