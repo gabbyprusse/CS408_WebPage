@@ -8,16 +8,67 @@ class Dao
     private $host = "localhost";
     private $db = "info";
     private $user = "root";
-    private $pass = "root";
+    private $pwd = "root";
 
-    public function getConnection()
+    public function getConnection(): PDO
     {
         //$this->logger->LogDebug("getting a connection...");
         return new PDO("mysql:host={$this->host};dbname={$this->db}", $this->user,
-            $this->pass);
+            $this->pwd);
+    }
+///////// NEW USER ///////////
+
+    /*
+     * sets the user by adding them to database
+     */
+    function setUser(object $pdo, string $user, string $pwd, int $goal): void
+    {
+        $query = "INSERT INTO users 
+            (username, pwd, goal) 
+        VALUES
+            (:username, :pwd, :goal);";
+        $stmt = $pdo->prepare($query);
+
+        $options = [
+            'cost' => 12
+        ];
+        $hashpwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
+
+        $stmt->bindParam(":username", $user);
+        $stmt->bindParam(":pwd", $hashpwd);
+        $stmt->bindParam(":goal", $goal);
+        $stmt->execute();
     }
 
+    /*
+     * gets user and all their info
+     */
+    function getUser(object $pdo, string $user) {
+        $query = "SELECT * FROM users WHERE username = :username;";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(":username", $user);
+        $stmt->execute();
 
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    /*
+     * gets the user's username
+     */
+    function getUsername(object $pdo, string $user) {
+        $query = "SELECT username FROM users WHERE username = :username;";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(":username", $user);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    /*
+     * gets the plan of the user based on their intended running goal
+     */
     public function getPlan($goal)
     {
         $conn = $this->getConnection();
@@ -30,12 +81,20 @@ class Dao
         }
         return $conn->query("SELECT monday, tuesday, wednesday, thursday, friday, saturday, sunday FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
-}
 
-//    public function __construct ($filename = "stuff.data") {
-//       // $this->logger = new KLogger ( "log.txt" , KLogger::WARN ) ;
-//        $this->filename = $filename;
-//    }
+    /*
+     * gets the running goal of the user
+     */
+    function getGoal(object $pdo, string $user) {
+        $query = "SELECT goal FROM users WHERE username = :username;";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(":username", $user);
+        $stmt->execute();
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+}
 
 //    public function getGoods () {
 //        $stuff = file_get_contents($this->filename);

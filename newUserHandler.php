@@ -4,7 +4,6 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 require_once 'dbh.php';
 require_once 'Dao.php';
-require_once 'NUmodel.php';
 require_once 'NUcontrol.php';
 
 // submitting to users database

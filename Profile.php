@@ -12,7 +12,6 @@ require_once 'header.php';
 require_once 'Dao.php';
 require_once 'dbh.php';
 require_once 'SIview.php';
-require_once 'SImodel.php';
 error_reporting(-1);
 ini_set('display_errors', 'On');
 ?>
