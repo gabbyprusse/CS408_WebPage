@@ -41,9 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die();
         }
 
-        setUser($pdo, $user, $pwd, $goal);
+        $pdo->setUser($user, $pwd, $goal);
 
-        header("Location: ../NewUser.php?signup=success");
+        //header("Location: ../NewUser.php?signup=success");
         header("Profile.php");
         $pdo = null;
         $stmt = null;
