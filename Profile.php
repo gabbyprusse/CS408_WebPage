@@ -16,7 +16,10 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 ?>
 <div>
-    <h1>Welcome<?php $_SESSION["user_username"]?>, here is your running plan!</h1>
+    <h1>Here is your running plan!</h1>
+</div>
+<div class="notes">
+    <em>Consistency is the key to achieving your goals!</em>
 </div>
 
 <table id="plan">
