@@ -21,7 +21,6 @@ class Dao
     public function getPlan($goal)
     {
         $conn = $this->getConnection();
-        $dist = null;
         if ($goal == 1) {
             $dist = "1mi";
         } else if ($goal == 2) {
