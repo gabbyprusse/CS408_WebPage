@@ -24,8 +24,8 @@ ini_set('display_errors', 'On');
     <label for="user">Username:</label><br>
     <input type="text" id="user" name="user" value=""><br>
 
-    <label for="pswd">Password:</label><br>
-    <input type="password" id="pswd" name="pswd" value=""><br><br>
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd" value=""><br><br>
 
     <input type="submit" value="Sign In"><br><br>
   </form>
