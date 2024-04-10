@@ -5,10 +5,10 @@ class Dao
 
     public $filename;
 
-    private $host = "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    private $db = "shjuruwzeawgadq0";
-    private $user = "dcguyzkyhwvbw176";
-    private $pwd = "amdilpgseejftshz";
+    private $host = "localhost";
+    private $db = "info";
+    private $user = "root";
+    private $pwd = "root";
 
     public function getConnection(): PDO
     {
