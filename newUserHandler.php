@@ -2,7 +2,6 @@
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
-require_once 'dbh.php';
 require_once 'Dao.php';
 require_once 'NUcontrol.php';
 
@@ -23,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (input_empty($user, $pwd, $goal)){
             $errors["emptyInput"] = "Fill in all fields";
         }
-        if (used_username($pdo, $user)) {
+        if (used_username($user)) {
             $errors["usedUsername"] = "Username already taken";
         }
 
