@@ -48,6 +48,11 @@ form {
     margin-left: 50px;
 }
 
+label {
+    color: #f59a9a;
+    margin-left: 50px;
+}
+
 footer {
     font-family: Didot, serif;
     text-align: center;
