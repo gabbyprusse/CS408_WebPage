@@ -41,7 +41,7 @@ CREATE TABLE 10k (
     PRIMARY KEY (id)
 );
 
-INSERT INTO '1mi' (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
+INSERT INTO 1mi (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
     VALUES
         ('walk 20 min', 'walk 4 min, run 1 min for 20 min', 'rest', 'walk 4 min, run 1 min for 20 min',
             'walk 4 min, run 1 min for 20 min', 'rest', 'run 2 min, walk 3 min for 20 min'),
@@ -56,22 +56,22 @@ INSERT INTO '1mi' (monday, tuesday, wednesday, thursday, friday, saturday, sunda
         ('walk 30 min', 'run 4 min, walk 2 min for 30 min', 'run 7 min, walk 2 min for 20 min', 'rest',
             'run 9 min, walk 2 min for 22 min', 'run 4 min, walk 2 min for 24 min', 'run a mile!');
 
-INSERT INTO '5k' (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
-VALUES
-    ('walk 20 min', 'run 30 sec, walk 30 sec for 1 mile', 'rest', 'run 1 min, walk 1 min for 1 mile',
-        'rest', 'run 1 min, walk 1 min for 1 mile', 'run 5 min, walk 1 min for 2 miles'),
-    ('walk 20 min', 'run 4 min, walk 30 sec for 2 miles', 'rest', 'run 1 min, walk 1 min for 1.5 miles',
-        'rest', 'run 1 min, walk 1 min for 1.5 miles', 'run 7 min, walk 1 min for 2 miles'),
-    ('walk 25 min', 'run 5 min, walk 30 sec for 2 miles', 'rest', 'run 2 min, walk 1 min for 1.5 miles',
-        'rest', 'run 2 min, walk 1 min for 1.5 miles', 'run 8 min, walk 30 sec for 2.5 miles'),
-    ('walk 30 min', 'run 5 min, walk 30 sec for 2.5 miles', 'rest', 'run 2 min, walk 1 min for 2 miles',
-        'rest', 'run 2 min, walk 1 min for 2 miles', 'run for 2.5 miles, walking for 30 sec if needed'),
-    ('walk 35 min', 'run 8 min, walk 30 sec for 2.5 miles', 'rest', 'run 2 min, walk 1 min for 2 miles',
-        'rest', 'run 2 min, walk 1 min for 2 miles', 'run 3 miles, walking for 30 sec if needed'),
-    ('walk 40 min', 'run 8 min, walk 30 sec for 2 miles', 'rest', 'run 2 min, walk 1 min',
-        'rest', 'run 2 min, walk 1 min', 'run a 5k!');
+INSERT INTO 5k (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
+    VALUES
+        ('walk 20 min', 'run 30 sec, walk 30 sec for 1 mile', 'rest', 'run 1 min, walk 1 min for 1 mile',
+            'rest', 'run 1 min, walk 1 min for 1 mile', 'run 5 min, walk 1 min for 2 miles'),
+        ('walk 20 min', 'run 4 min, walk 30 sec for 2 miles', 'rest', 'run 1 min, walk 1 min for 1.5 miles',
+            'rest', 'run 1 min, walk 1 min for 1.5 miles', 'run 7 min, walk 1 min for 2 miles'),
+        ('walk 25 min', 'run 5 min, walk 30 sec for 2 miles', 'rest', 'run 2 min, walk 1 min for 1.5 miles',
+            'rest', 'run 2 min, walk 1 min for 1.5 miles', 'run 8 min, walk 30 sec for 2.5 miles'),
+        ('walk 30 min', 'run 5 min, walk 30 sec for 2.5 miles', 'rest', 'run 2 min, walk 1 min for 2 miles',
+            'rest', 'run 2 min, walk 1 min for 2 miles', 'run for 2.5 miles, walking for 30 sec if needed'),
+        ('walk 35 min', 'run 8 min, walk 30 sec for 2.5 miles', 'rest', 'run 2 min, walk 1 min for 2 miles',
+            'rest', 'run 2 min, walk 1 min for 2 miles', 'run 3 miles, walking for 30 sec if needed'),
+        ('walk 40 min', 'run 8 min, walk 30 sec for 2 miles', 'rest', 'run 2 min, walk 1 min',
+            'rest', 'run 2 min, walk 1 min', 'run a 5k!');
 
-INSERT INTO `10k` (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
+INSERT INTO 10k (monday, tuesday, wednesday, thursday, friday, saturday, sunday)
 VALUES
     ('walk 30 min', 'run 1 min, walk 2 min for 30 min', 'rest', 'run 1 min, walk 2 min for 30 min',
         'run 1 min, walk 2 min', 'rest', 'run 1.5 miles'),

@@ -10,7 +10,6 @@
 <?php
 require_once 'header.php';
 require_once 'Dao.php';
-require_once 'dbh.php';
 require_once 'SIview.php';
 error_reporting(-1);
 ini_set('display_errors', 'On');
@@ -34,7 +33,7 @@ ini_set('display_errors', 'On');
     <?php
     $dao = new Dao();
     $dao->getConnection();
-    $lines = getPlan($dao, $_SESSION["user_username"]);
+    $lines = $dao->getPlan($_SESSION["user_username"]);
     foreach ($lines as $line) {
         echo "<tr><td>{$line['monday']}</td><td>{$line['tuesday']}</td><td>{$line['wednesday']}</td>
             <td>{$line['thursday']}</td><td>{$line['friday']}</td><td>{$line['saturday']}</td>
