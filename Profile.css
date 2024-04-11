@@ -70,6 +70,7 @@ th, td {
 }
 
 th {
+    margin-top: 10px;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
