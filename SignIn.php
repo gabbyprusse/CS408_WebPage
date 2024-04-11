@@ -31,7 +31,8 @@ ini_set('display_errors', 'On');
   </form>
 
 <?php
-check_login_errors();
+    check_login_errors();
+    header('Profile.php');
 ?>
 
 <?php require_once "footer.php"; ?>

@@ -41,6 +41,7 @@ ini_set('display_errors', 'On');
 
     <?php
         check_signup_errors();
+        header('Profile.php');
 
     ?>
 
