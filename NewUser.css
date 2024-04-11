@@ -49,6 +49,17 @@ label, input, form {
     margin-left: 50px;
 }
 
+.button {
+    border-radius: 12px;
+    padding: 10px 24px;
+    color: #885c39;
+    background-color: #eae3d3;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(253, 202, 202, 0.24), 0 17px 50px 0 rgba(211, 176, 176, 0.19);
+}
+
 footer {
     font-family: Didot, serif;
     text-align: center;

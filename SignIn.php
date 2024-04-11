@@ -27,7 +27,7 @@ ini_set('display_errors', 'On');
     <label for="pwd">Password:</label><br>
     <input type="password" id="pwd" name="pwd" value=""><br><br>
 
-    <input type="submit" value="Sign In"><br><br>
+    <input class="button" type="submit" value="Sign In"><br><br>
   </form>
 
 <?php

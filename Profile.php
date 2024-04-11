@@ -56,7 +56,7 @@ ini_set('display_errors', 'On');
 
 <div class="logout">
 <form action="logout.php" method="post">
-    <button>Log out</button>
+    <button class="button">Log out</button>
 </form>
 </div>
 

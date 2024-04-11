@@ -35,7 +35,7 @@ ini_set('display_errors', 'On');
                 <label for="10k"></label><input type="radio" id="3" name="goal" value="3" />
                 <label for="10k">10k (6ish miles)</label> <br>
         <p>
-            <input type="submit" value="Create Profile">
+            <input class="button" type="submit" value="Create Profile">
         </p>
     </form>
 
