@@ -5,7 +5,7 @@ ini_set('session.use_only_strict_mode', 1);
 
 session_set_cookie_params([
     'lifetime' => 1800,
-    'domain' => 'localhost',
+    'domain' => 'tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     'path' => '/',
     'secure' => true,
     'httponly' => true]);

@@ -5,7 +5,7 @@ class Dao
 
     public $filename;
 
-    private $host = "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com	";
+    private $host = "tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
     private $db = "shjuruwzeawgadq0";
     private $user = "dcguyzkyhwvbw176";
     private $pwd = "ssxz509et77a2pb1";
