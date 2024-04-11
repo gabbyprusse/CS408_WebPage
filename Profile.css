@@ -85,8 +85,9 @@ tr:hover {background-color: #f3b9b4;}
 .button {
     border-radius: 12px;
     padding: 10px 24px;
-    color: #885c39;
-    background-color: #eae3d3;
+    color: lightcoral;
+    background-color: #f6eee0;
+    border: 2px solid #a6744c;
 }
 
 .button:hover {

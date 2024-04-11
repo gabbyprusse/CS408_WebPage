@@ -43,6 +43,14 @@ h3, h4, h5 {
     text-align: center;
 }
 
+.button {
+    border-radius: 12px;
+    padding: 10px 24px;
+    color: lightcoral;
+    background-color: #f6eee0;
+    border: 2px solid #a6744c;
+}
+
 footer {
     font-family: Didot, serif;
     text-align: center;
