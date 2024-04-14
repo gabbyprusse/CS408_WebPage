@@ -16,6 +16,19 @@ ini_set('display_errors', 'On');
     <body>
     <?php require_once "header.php"; ?>
 
+    ?>
+
+    <div id="text">
+        <?php
+        if (isset($_SESSION['messages'])) {
+            foreach ($_SESSION['messages'] as $message) {
+                echo "<div class='message " . "'>{$message}</div>";
+            }
+            unset($_SESSION['messages']);
+        }
+
+        ?>
+
     <! ACTUAL CONTENT >
     <form method="post" action="newUserHandler.php">
         <label for="username">Username:</label><br>
