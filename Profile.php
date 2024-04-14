@@ -18,7 +18,6 @@ require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 require_once 'SIview.php';
-require_once 'SignInHandler.php';
 ?>
 <div>
     <h1>Here is your running plan!</h1>
