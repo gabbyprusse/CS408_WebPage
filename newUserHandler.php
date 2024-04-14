@@ -40,15 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["usedUsername"] = "Username already taken";
         }
 
-        check_signup_errors();
-
-
         // saves valid data
         $signUpData = [
             "username" => $user,
             "goal" => $goal
         ];
         $_SESSION["signUp_data"] = $errors;
+
+        check_signup_errors();
 
         require_once "confiSession.php";
 

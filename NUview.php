@@ -26,11 +26,13 @@ function check_signup_errors(): void
             }
 
             unset($_SESSION['errors']);
+        header("Location: ../newUser.php");
         } else if (isset($_GET["signup"]) && $_GET["signup"] == "success") {
             echo '<br>';
             echo '<p class="form-success">Get ready to run!</p>';
+        header("Location: ../Profile.php");
         }
-    header("Location: ../Profile.php");
+
 
     }
 
