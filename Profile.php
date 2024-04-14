@@ -65,11 +65,6 @@ ini_set('display_errors', 'On');
 </div>
 </body>
 
-<!-- This Script is from www.javascriptbestcodes.com, Provided by: Web Smile -->
-<script type='text/javascript' src='https://m.free-codes.org/g.php?id=2002'></script><!-- Print Page Script
-Use this script to have your
-users print your HTML page
--->
 <SCRIPT LANGUAGE="JavaScript">
     function printPlan(areaID) {
         var printContent = document.getElementById(areaID).innerHTML;
