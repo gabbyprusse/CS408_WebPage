@@ -30,6 +30,7 @@ function check_signup_errors(): void
             echo '<br>';
             echo '<p class="form-success">Get ready to run!</p>';
         }
+    header("Location: ../Profile.php");
 
     }
 

@@ -40,13 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["usedUsername"] = "Username already taken";
         }
 
-        // prints out sign in error messages
-        if (0 < count($errors)) {
-            $_SESSION['errors'] = $errors;
-            $_SESSION['inputs'] = $_POST;
-            header("Location: ../NewUser.php");
-            exit();
-        }
+        check_signup_errors();
+
 
         // saves valid data
         $signUpData = [
