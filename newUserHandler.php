@@ -40,13 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["usedUsername"] = "Username already taken";
         }
 
+        // prints out sign in error messages
         if (0 < count($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
-            header("NewUser.php");
+            header("Location: ../NewUser.php");
             exit();
         }
 
+        // saves valid data
         $signUpData = [
             "username" => $user,
             "goal" => $goal
@@ -55,8 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         require_once "confiSession.php";
 
+        // creates user
         $dao->setUser($user, $pwd, $goal);
-        header("Profile.php");
+        header("Location: ../Profile.php");
         $dao = null;
         $stmt = null;
 
