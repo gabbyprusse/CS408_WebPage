@@ -40,30 +40,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $errors["usedUsername"] = "Username already taken";
         }
 
+        if (0 < count($errors)) {
+            $_SESSION['errors'] = $errors;
+            $_SESSION['inputs'] = $_POST;
+            header("NewUser.php");
+            exit();
+        }
+
+        $signUpData = [
+            "username" => $user,
+            "goal" => $goal
+        ];
+        $_SESSION["signUp_data"] = $errors;
 
         require_once "confiSession.php";
 
-        if ($errors) {
-            $_SESSION["errors_signUp"] = $errors;
-
-            $signUpData = [
-                "username" => $user,
-                "goal" => $goal
-            ];
-            $_SESSION["signUp_data"] = $errors;
-
-            header("Location: ../NewUser.php");
-            die();
-        }
-
         $dao->setUser($user, $pwd, $goal);
-
-        //header("Location: ../NewUser.php?signup=success");
         header("Profile.php");
         $dao = null;
         $stmt = null;
 
         die();
+
+        //header("Location: ../NewUser.php?signup=success");
     }
     catch (PDOException $e)
     {
