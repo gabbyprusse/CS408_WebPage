@@ -11,20 +11,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pwd = $_POST["pwd"];
     $goal = $_POST["goal"];
 
-    $pdo = new Dao();
-    $pdo->getConnection();
+    $dao = new Dao();
+    $dao->getConnection();
 
 
     try {
 
         // ERROR HANDLERS
         $errors = [];
-        if (input_empty($user, $pwd, $goal)){
-            $errors["emptyInput"] = "Fill in all fields";
+        // no username
+        if (0 == strlen($user)){
+            $errors["emptyUser"] = "Fill in Username";
         }
+        // no pwd
+        if (0 == strlen($pwd)){
+            $errors["emptyPwd"] = "Fill in Password";
+        }
+        // pwd too short
+        else if (strlen($pwd) < 8) {
+            $errors["shortPwd"] = "Password must be at least 8 characters";
+        }
+        // no goal
+        if (0 == strlen($goal)){
+            $errors["emptyGoal"] = "Choose a Goal";
+        }
+        // duplicated username
         if (used_username($user)) {
             $errors["usedUsername"] = "Username already taken";
         }
+
 
         require_once "confiSession.php";
 
@@ -41,11 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die();
         }
 
-        $pdo->setUser($user, $pwd, $goal);
+        $dao->setUser($user, $pwd, $goal);
 
         //header("Location: ../NewUser.php?signup=success");
         header("Profile.php");
-        $pdo = null;
+        $dao = null;
         $stmt = null;
 
         die();

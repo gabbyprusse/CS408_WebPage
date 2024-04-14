@@ -8,6 +8,12 @@
 <body>
 
 <?php
+if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
+} else {
+    header("SignIn.php");
+    exit();
+}
+
 require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
