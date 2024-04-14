@@ -28,6 +28,9 @@ ini_set('display_errors', 'On');
     <em>Consistency is the key to achieving your goals!</em>
 </div>
 
+ng code in JavaScript.
+
+<a href="javascript:void(0);" onclick="printPlan('plan')">Print</a>
 
 <table id="plan">
     <thead>
@@ -66,15 +69,15 @@ Use this script to have your
 users print your HTML page
 -->
 <SCRIPT LANGUAGE="JavaScript">
-    if (window.print) {
-        document.write('<form> '
-            + '<input type=button name=print value="Print!" '
-            + 'onClick="window.print()"> To Print this page!</form>');
+    function printPlan(areaID) {
+        var printContent = document.getElementById(areaID).innerHTML;
+        var ogContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body = ogContent;
     }
-    // End -->
 </script>
 
-<a target="_blank" href="http://free-web-tools.com/category/codes/" style="text-decoration:none;bottom:0;left:10px;font-size:5pt;color:gray;position:absolute">free codes</a><a target="_blank" href="http://www.javascriptbestcodes.com" style="font-size: 8pt; text-decoration: none">Javascript Codes</a>
 
 
 
