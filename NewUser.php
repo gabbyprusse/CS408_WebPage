@@ -20,11 +20,11 @@ ini_set('display_errors', 'On');
 
     <div id="text">
         <?php
-        if (isset($_SESSION['messages'])) {
-            foreach ($_SESSION['messages'] as $message) {
-                echo "<div class='message " . "'>{$message}</div>";
+        if (isset($_SESSION['errors'])) {
+            foreach ($_SESSION['errors'] as $message) {
+                echo "<div class='errors " . "'>{$message}</div>";
             }
-            unset($_SESSION['messages']);
+            unset($_SESSION['errors']);
         }
 
         ?>
