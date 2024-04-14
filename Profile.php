@@ -69,6 +69,7 @@ require_once 'SIview.php';
         document.body.innerHTML = printContent;
         window.print();
         document.body = ogContent;
+        <?php header("Location: ../Profile.php"); ?>
     }
 </script>
 
