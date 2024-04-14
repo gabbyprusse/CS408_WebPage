@@ -27,21 +27,7 @@ ini_set('display_errors', 'On');
 <div class="notes">
     <em>Consistency is the key to achieving your goals!</em>
 </div>
-<!-- This Script is from www.javascriptbestcodes.com, Provided by: Web Smile -->
-<script type='text/javascript' src='https://m.free-codes.org/g.php?id=2002'></script><!-- Print Page Script
-Use this script to have your
-users print your HTML page
--->
-<SCRIPT LANGUAGE="JavaScript">
-    if (window.print) {
-        document.write('<form> '
-            + '<input type=button name=print value="Print!" '
-            + 'onClick="window.print()"> To Print this page!</form>');
-    }
-    // End -->
-</script>
 
-<a target="_blank" href="http://free-web-tools.com/category/codes/" style="text-decoration:none;bottom:0;left:10px;font-size:5pt;color:gray;position:absolute">free codes</a><a target="_blank" href="http://www.javascriptbestcodes.com" style="font-size: 8pt; text-decoration: none">Javascript Codes</a>
 
 <table id="plan">
     <thead>
@@ -73,6 +59,23 @@ users print your HTML page
 
     ?>
 </table>
+
+<!-- This Script is from www.javascriptbestcodes.com, Provided by: Web Smile -->
+<script type='text/javascript' src='https://m.free-codes.org/g.php?id=2002'></script><!-- Print Page Script
+Use this script to have your
+users print your HTML page
+-->
+<SCRIPT LANGUAGE="JavaScript">
+    if (window.print) {
+        document.write('<form> '
+            + '<input type=button name=print value="Print!" '
+            + 'onClick="window.print()"> To Print this page!</form>');
+    }
+    // End -->
+</script>
+
+<a target="_blank" href="http://free-web-tools.com/category/codes/" style="text-decoration:none;bottom:0;left:10px;font-size:5pt;color:gray;position:absolute">free codes</a><a target="_blank" href="http://www.javascriptbestcodes.com" style="font-size: 8pt; text-decoration: none">Javascript Codes</a>
+
 
 
 <div class="logout">
