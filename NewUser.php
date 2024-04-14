@@ -17,7 +17,7 @@ ini_set('display_errors', 'On');
     <?php require_once "header.php"; ?>
 
     <! ACTUAL CONTENT >
-    <form action="Profile.php" method="post">
+    <form method="post" action="newUserHandler.php">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="applesauce"><br>
 
