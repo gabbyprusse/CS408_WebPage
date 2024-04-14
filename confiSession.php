@@ -35,8 +35,8 @@ if (isset($_SESSION["userId"])) {
     }
 }
 
-// when user is logged in
-function regenerateIdLI() {
+// when user is signed in
+function regenerateIdSI() {
     session_regenerate_id(true );
 
     // creates new session id with user's id
