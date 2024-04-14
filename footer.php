@@ -7,5 +7,7 @@
 
 </html>
 <?php
+require_once "javascript.html"; ?>
+<?php
 error_reporting(-1);
 ini_set('display_errors', 'On'); ?>
