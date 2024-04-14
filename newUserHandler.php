@@ -3,7 +3,6 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 require_once 'Dao.php';
-require_once 'NUcontrol.php';
 require_once 'NUview.php';
 
 // submitting to users database
@@ -28,16 +27,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (0 == strlen($pwd)){
             $errors["emptyPwd"] = "Fill in Password";
         }
-        // pwd too short
-        else if (strlen($pwd) < 8) {
-            $errors["shortPwd"] = "Password must be at least 8 characters";
-        }
         // no goal
         if (0 == strlen($goal)){
             $errors["emptyGoal"] = "Choose a Goal";
         }
         // duplicated username
-        if (used_username($user)) {
+        if ($dao->getUsername($user) != null) {
             $errors["usedUsername"] = "Username already taken";
         }
 
