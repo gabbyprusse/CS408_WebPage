@@ -28,10 +28,10 @@ ini_set('display_errors', 'On');
     <em>Consistency is the key to achieving your goals!</em>
 </div>
 
-ng code in JavaScript.
 
-<a href="javascript:void(0);" onclick="printPlan('plan')">Print</a>
+<a href="javascript:void(0);" onclick="printPlan('tabL')">Print your Plan</a>
 
+<div id="tabL">
 <table id="plan">
     <thead>
     <tr>
@@ -62,6 +62,8 @@ ng code in JavaScript.
 
     ?>
 </table>
+</div>
+</body>
 
 <!-- This Script is from www.javascriptbestcodes.com, Provided by: Web Smile -->
 <script type='text/javascript' src='https://m.free-codes.org/g.php?id=2002'></script><!-- Print Page Script
