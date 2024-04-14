@@ -4,6 +4,7 @@ error_reporting(-1);
 ini_set('display_errors', 'On');
 require_once 'Dao.php';
 require_once 'NUcontrol.php';
+require_once 'NUview.php';
 
 // submitting to users database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
