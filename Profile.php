@@ -18,8 +18,7 @@ require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 require_once 'SIview.php';
-error_reporting(-1);
-ini_set('display_errors', 'On');
+
 ?>
 <div>
     <h1>Here is your running plan!</h1>
