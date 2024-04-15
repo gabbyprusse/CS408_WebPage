@@ -53,7 +53,7 @@ session_start();
                 $dao = null;
                 $stmt = null;
                 header('Location: Profile.php');
-                die();
+                //die();
             }
 
 
