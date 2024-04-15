@@ -8,6 +8,10 @@ h1 {
     color: #885c39;
 }
 
+h2 {
+    margin-left: 35px;
+}
+
 img {
     float: right;
 }
