@@ -7,8 +7,8 @@ require_once 'SIcontrol.php';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_POST["username"];
-    $pwd = $_POST["pwd"];
+    $user = $_SESSION["user"];
+    $pwd = $_SESSION["pwd"];
 }
 
     $dao = new Dao();
