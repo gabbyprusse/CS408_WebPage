@@ -61,7 +61,7 @@ class Dao
     /*
      * gets the user's username
      */
-    function getUsername(string $user) {
+    function getUsername($user) {
         $conn = $this->getConnection();
         $query = "SELECT username FROM users WHERE username = :username;";
         // escapes injection
