@@ -29,7 +29,7 @@ session_start();
 
         // checks if any errors occurred
         if (count($errors) > 0) {
-            $_SESSION["errors_newuser"] = $errors;
+            $_SESSION['errors_newuser'] = $errors;
             header('Location: newUser.php');
 
             // saves valid data
@@ -53,7 +53,7 @@ session_start();
                 $dao = null;
                 $stmt = null;
                 header('Location: Profile.php');
-                //die();
+                die();
             }
 
 

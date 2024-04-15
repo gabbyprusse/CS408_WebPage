@@ -13,6 +13,7 @@
 
     <body>
     <?php require_once "header.php";
+    require_once "newUserHandler.php";
     //$userdata = check_login($dao);
         if (isset($_SESSION['errors_newuser'])) {
             foreach ($_SESSION['errors_newuser'] as $message) {
