@@ -48,15 +48,14 @@ session_start();
 //                $goal = $_POST["goal"];
 //                exit;
 //            }
-        } else {// creates user
-                $dao->setUser($user, $pwd, $goal);
-                $_SESSION['user_username'] = $user;
-                $_SESSION['goal'] = $goal;
-                header("Location: ../Profile.php");
-                $dao = null;
-                $stmt = null;
-                header('Location: Profile.php');
-                die();
+        } else {
+            // creates user
+            $dao->setUser($user, $pwd, $goal);
+            $_SESSION['authenticated'] = true;
+            $_SESSION['user_username'] = $user;
+            $_SESSION['goal'] = $goal;
+            header('Location: Profile.php');
+            die();
             }
 
 
