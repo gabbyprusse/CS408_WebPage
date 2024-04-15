@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 
         // ERROR HANDLERS
         $errors = [];
@@ -38,7 +36,7 @@ session_start();
                 "username" => $user,
                 "goal" => $goal
             ];
-            $_SESSION["signUp_data"] = $signUpData;
+            $_SESSION["newuser_data"] = $signUpData;
 //
 //            // submitting to users database
 //            if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -50,8 +48,9 @@ session_start();
 //            }
         } else {
             // creates user
-            $dao->setUser($user, $pwd, $goal);
+            $result = $dao->setUser($user, $pwd, $goal);
             $_SESSION['authenticated'] = true;
+            $_SESSION['userId'] = $result['id'];
             $_SESSION['user_username'] = $user;
             $_SESSION['goal'] = $goal;
             header('Location: Profile.php');
