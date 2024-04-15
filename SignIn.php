@@ -35,7 +35,10 @@
   </form>
 
 <?php
-    header('Profile.php');
+    if (count($_SESSION['errors_signin']) == 0) {
+        header('Location: Profile.php');
+    }
+
 ?>
 
 <?php require_once "footer.php"; ?>
