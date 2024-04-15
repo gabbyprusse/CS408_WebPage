@@ -4,12 +4,8 @@ session_start();
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user = $_SESSION["user"];
-    $pwd = $_SESSION["pwd"];
-}
+    $user = $_POST["user_username"];
+    $pwd = $_POST["pwd"];
 
     $dao = new Dao();
 
@@ -35,9 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             header("Location: ../SignIn.php");
             die();
+        } else {
+            $_SESSION["userId"] = $result['id'];
+            $_SESSION["user_username"] = htmlspecialchars($result['username'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401);
+            $_SESSION['goal'] = $result['goal'];
+
+            header("Location: Profile.php");
         }
-
-        $_SESSION["userId"] = $result["id"];
-        $_SESSION["user_username"] = htmlspecialchars($result["username"], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401);
-
-        header("Location: ../Profile.php");
