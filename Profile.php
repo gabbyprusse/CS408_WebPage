@@ -16,11 +16,11 @@
 require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
-$dao = new Dao();
-check_login($dao);
+
+
 ?>
 <div>
-    <h1>Welcome, <?php $dao->getUser() ?></h1>
+    <h1>Welcome, <?php $_SESSION['user_username'] ?></h1>
     <h2>Here is your running plan!</h2>
 </div>
 <div class="notes">
