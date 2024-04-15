@@ -76,15 +76,25 @@ class Dao
     /*
      * gets the plan of the user based on their intended running goal
      */
-    public function getPlan($goal)
+    public function getPlan($user)
     {
         $conn = $this->getConnection();
+        $query = "SELECT goal FROM users WHERE username = :username;";
+        // escapes injection
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(":username", $user);
+        $stmt->execute();
+        $goal = $stmt->fetch(PDO::FETCH_ASSOC);
+
         if ($goal == 1) {
             $dist = "1mi";
         } else if ($goal == 2) {
             $dist = "5k";
-        } else {
+        } else if ($goal == 3) {
             $dist = "10k";
+        }
+        else {
+            $dist = null;
         }
         return $conn->query("SELECT * FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
