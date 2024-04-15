@@ -2,6 +2,7 @@
 
 session_start();
 
+
         // ERROR HANDLERS
         $errors = [];
         // no username entered
@@ -38,17 +39,19 @@ session_start();
                 "goal" => $goal
             ];
             $_SESSION["signUp_data"] = $signUpData;
-
-            // submitting to users database
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // something was posted so data is to be collected/saved
-                $user = $_POST["username"];
-                $pwd = $_POST["pwd"];
-                $goal = $_POST["goal"];
-                exit;
-            }
+//
+//            // submitting to users database
+//            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//                // something was posted so data is to be collected/saved
+//                $user = $_POST["username"];
+//                $pwd = $_POST["pwd"];
+//                $goal = $_POST["goal"];
+//                exit;
+//            }
         } else {// creates user
                 $dao->setUser($user, $pwd, $goal);
+                $_SESSION['user_username'] = $user;
+                $_SESSION['goal'] = $goal;
                 header("Location: ../Profile.php");
                 $dao = null;
                 $stmt = null;
