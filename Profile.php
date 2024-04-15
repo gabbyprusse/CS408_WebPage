@@ -16,7 +16,6 @@
 require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
-require_once 'SIview.php';
 $dao = new Dao();
 check_login($dao);
 ?>
