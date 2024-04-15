@@ -64,7 +64,9 @@ require_once 'SIcontrol.php';
 </div>
 </body>
 
+
 <SCRIPT LANGUAGE="JavaScript">
+    // HW7
     function printPlan(areaID) {
         var printContent = document.getElementById(areaID).innerHTML;
         var ogContent = document.body.innerHTML;
