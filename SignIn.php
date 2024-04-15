@@ -13,11 +13,16 @@
     require_once "NUview.php";
     require_once "SIview.php";
     require_once 'Dao.php';
+    session_start();
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
+
+    if (isset($_SESSION['errors_signin'])) {
+        foreach ($_SESSION['errors_signin'] as $error) {
+            echo "<div class='error'>{$error}</div>";
+        }
+        unset($_SESSION['errors_newuser']);
+}
 ?>
-
 
   <form method="get" action="SignInHandler.php">
     <br>

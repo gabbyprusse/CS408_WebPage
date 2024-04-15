@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once "confiSession.php";
 
         // don't want to save previous fields for security reasons
-        if ($errors) {
-            $_SESSION["errors_login"] = $errors;
+        if (count($errors) > 0) {
+            $_SESSION["errors_signin"] = $errors;
 
             header("Location: ../SignIn.php");
             die();

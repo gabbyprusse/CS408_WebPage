@@ -49,6 +49,17 @@ label, input, form {
     margin-left: 50px;
 }
 
+.error {
+    border: 1px black solid;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    background-color: crimson;
+    width: 300px;
+    color: #FEFEFE;
+
+
+}
+
 .button {
     border-radius: 12px;
     padding: 10px 24px;

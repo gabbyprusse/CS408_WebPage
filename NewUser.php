@@ -14,18 +14,18 @@
 
     <body>
     <?php require_once "header.php";
-    $userdata = check_login($dao);
+    //$userdata = check_login($dao);
     ?>
 
     ?>
 
     <div id="text">
         <?php
-        if (isset($_SESSION['errors'])) {
-            foreach ($_SESSION['errors'] as $message) {
-                echo "<div class='errors " . "'>{$message}</div>";
+        if (isset($_SESSION['errors_newuser'])) {
+            foreach ($_SESSION['errors_newuser'] as $message) {
+                echo "<div class='errors'>{$message}</div>";
             }
-            unset($_SESSION['errors']);
+            unset($_SESSION['errors_newuser']);
         }
 
         ?>
@@ -55,6 +55,7 @@
 
         <a href="SignIn.php">Sign in with Existing Profile</a>
     </form>
+    </div>
 
     <?php
         check_signup_errors();
