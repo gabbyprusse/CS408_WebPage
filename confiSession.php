@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_only_strict_mode', 1);
 
@@ -10,7 +10,7 @@ session_set_cookie_params([
     'secure' => true,
     'httponly' => true]);
 
-session_start();
+
 
 if (isset($_SESSION["userId"])) {
     if (!isset($_SESSION["last_regeneration"])) {

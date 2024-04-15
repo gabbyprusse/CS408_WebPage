@@ -6,6 +6,7 @@ require_once 'NUview.php';
 
 // submitting to users database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // something was posted so data is to be collected/saved
     $user = $_POST["username"];
     $pwd = $_POST["pwd"];
     $goal = $_POST["goal"];
@@ -61,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Query failed " . $e->getMessage());
     }
 } else {
+    // data was no valid
     header("Location: ../NewUser.php");
     die();
 }

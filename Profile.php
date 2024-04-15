@@ -17,9 +17,12 @@ require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 require_once 'SIview.php';
+$dao = new Dao();
+check_login($dao);
 ?>
 <div>
-    <h1>Here is your running plan!</h1>
+    <h1>Welcome, <?php $dao->getUser() ?></h1>
+    <h2>Here is your running plan!</h2>
 </div>
 <div class="notes">
     <em>Consistency is the key to achieving your goals!</em>

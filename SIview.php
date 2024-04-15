@@ -4,14 +4,7 @@ declare(strict_types=1);
 session_start();
 require_once 'Dao.php';
 
-function outputUsername(): void
-{
-    if (isset($_SESSION["userId"])) {
-        echo "Welcome, " . $_SESSION["user_username"];
-    } else {
-        echo "Please log in or create a profile";
-    }
-}
+
 function check_login_errors(): void
 {
     if (isset($_SESSION['errors_login']))

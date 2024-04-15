@@ -35,6 +35,7 @@ class Dao
         ];
         $hashpwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
 
+        // escapes injection
         $stmt->bindParam(":username", $user);
         $stmt->bindParam(":pwd", $hashpwd);
         $stmt->bindParam(":goal", $goal);
@@ -42,13 +43,15 @@ class Dao
     }
 
     /*
-     * gets user and all their info
+     * gets user based on their username and all their info
      */
     function getUser(string $user) {
         $conn = $this->getConnection();
         $query = "SELECT * FROM users WHERE username = :username;";
+        // escapes injection
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
+        $stmt->bindParam(":goal", $goal);
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -61,6 +64,7 @@ class Dao
     function getUsername(string $user) {
         $conn = $this->getConnection();
         $query = "SELECT username FROM users WHERE username = :username;";
+        // escapes injection
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
         $stmt->execute();
@@ -76,6 +80,7 @@ class Dao
     {
         $conn = $this->getConnection();
         $query = "SELECT goal FROM users WHERE username = :username;";
+        // escapes injection
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
         $stmt->execute();
@@ -89,6 +94,22 @@ class Dao
             $dist = "10k";
         }
         return $conn->query("SELECT * FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    function check_signin() {
+        if (isset($_SESSION['user_id'])) {
+            $id = $_SESSION['user_id'];
+            $query = "select * from users where id = '$id' limit 1";
+
+            $result = mysqli_query($dao, $query);
+            if ($result && mysqli_num_rows($result) > 0) {
+                $userdata = mysqli_fetch_assoc($result);
+                return $userdata;
+            }
+        }
+        //redirect to sign in
+        header("Location: SignIn.php");
+        die();
     }
 
 }

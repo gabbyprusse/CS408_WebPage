@@ -19,7 +19,7 @@ ini_set('display_errors', 'On');
 ?>
 
 
-  <form>
+  <form method="get" action="SignInHandler.php">
     <br>
     <label for="user">Username:</label><br>
     <input type="text" id="user" name="user" value=""><br>
@@ -28,6 +28,8 @@ ini_set('display_errors', 'On');
     <input type="password" id="pwd" name="pwd" value=""><br><br>
 
     <input class="button" type="submit" name="Sign In"><br><br>
+
+      <a href="NewUser.php">Create Profile</a>
   </form>
 
 <?php

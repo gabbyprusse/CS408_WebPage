@@ -13,7 +13,9 @@
     </head>
 
     <body>
-    <?php require_once "header.php"; ?>
+    <?php require_once "header.php";
+    $userdata = check_login($dao);
+    ?>
 
     ?>
 
@@ -49,6 +51,9 @@
         <p>
             <input class="button" type="submit" value="Create Profile">
         </p>
+
+
+        <a href="SignIn.php">Sign in with Existing Profile</a>
     </form>
 
     <?php
