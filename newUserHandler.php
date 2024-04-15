@@ -27,45 +27,37 @@ session_start();
             $errors["usedUsername"] = "Username already taken";
         }
 
+        // checks if any errors occurred
         if (count($errors) > 0) {
             $_SESSION["errors_newuser"] = $errors;
             header('Location: newUser.php');
-            exit;
-        }
 
-        // saves valid data
-        $signUpData = [
-            "username" => $user,
-            "goal" => $goal
-        ];
-        $_SESSION["signUp_data"] = $signUpData;
+            // saves valid data
+            $signUpData = [
+                "username" => $user,
+                "goal" => $goal
+            ];
+            $_SESSION["signUp_data"] = $signUpData;
+
+            // submitting to users database
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // something was posted so data is to be collected/saved
+                $user = $_POST["username"];
+                $pwd = $_POST["pwd"];
+                $goal = $_POST["goal"];
+                exit;
+            }
+        } else {// creates user
+                $dao->setUser($user, $pwd, $goal);
+                header("Location: ../Profile.php");
+                $dao = null;
+                $stmt = null;
+                header('Location: Profile.php');
+                die();
+            }
 
 
-        require_once "confiSession.php";
 
-    // submitting to users database
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // something was posted so data is to be collected/saved
-            $user = $_POST["username"];
-            $pwd = $_POST["pwd"];
-            $goal = $_POST["goal"];
-
-
-
-        // creates user
-        $dao->setUser($user, $pwd, $goal);
-        header("Location: ../Profile.php");
-        $dao = null;
-        $stmt = null;
-
-        die();
-
-        //header("Location: ../NewUser.php?signup=success");
-} else {
-    // data was no valid
-    header("Location: ../NewUser.php");
-    die();
-}
 
 
 
