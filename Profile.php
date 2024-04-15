@@ -18,7 +18,9 @@ require_once 'header.php';
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
-
+ if (!$_SESSION['authenticated']) {
+     header("Location: main.php");
+ }
 ?>
 <div>
     <h1>Welcome, <?php echo $_SESSION['user_username']?></h1>
