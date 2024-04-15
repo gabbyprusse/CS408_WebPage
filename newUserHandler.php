@@ -2,8 +2,6 @@
 
 session_start();
 
-require_once 'NUview.php';
-
         // ERROR HANDLERS
         $errors = [];
         // no username entered
@@ -34,15 +32,12 @@ require_once 'NUview.php';
             header('Location: newUser.php');
         }
 
-        check_signup_errors();
-
         // saves valid data
         $signUpData = [
             "username" => $user,
             "goal" => $goal
         ];
         $_SESSION["signUp_data"] = $signUpData;
-
 
 
         require_once "confiSession.php";

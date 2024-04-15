@@ -1,6 +1,5 @@
 <?php
-    require_once 'confiSession.php';
-    require_once 'NUview.php';
+
     require_once 'Dao.php';
 
 ?>
@@ -15,12 +14,6 @@
     <body>
     <?php require_once "header.php";
     //$userdata = check_login($dao);
-    ?>
-
-    ?>
-
-    <div id="text">
-        <?php
         if (isset($_SESSION['errors_newuser'])) {
             foreach ($_SESSION['errors_newuser'] as $message) {
                 echo "<div class='errors'>{$message}</div>";
@@ -55,12 +48,9 @@
 
         <a href="SignIn.php">Sign in with Existing Profile</a>
     </form>
-    </div>
 
     <?php
-        check_signup_errors();
         header('Profile.php');
-
     ?>
 
     <?php require_once "footer.php"; ?>
