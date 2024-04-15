@@ -21,7 +21,7 @@ require_once 'SIcontrol.php';
 
 ?>
 <div>
-    <h1>Welcome,<?php $_SESSION['user_username']?></h1>
+    <h1>Welcome,<?php echo $_SESSION['user_username']?></h1>
     <h2>Here is your running plan!</h2>
 </div>
 <div class="notes">
