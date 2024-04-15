@@ -94,7 +94,7 @@ class Dao
             return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
         }
         else {
-            echo "plan not shown";
+            exit;
         }
 
     }
