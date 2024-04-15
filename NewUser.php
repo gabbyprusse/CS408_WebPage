@@ -1,7 +1,6 @@
 <?php
 
     require_once 'Dao.php';
-    setcookie();
 ?>
 <html lang="en">
     <head>
