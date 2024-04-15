@@ -87,16 +87,16 @@ class Dao
         $goal = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($goal == 1) {
-            $dist = "1mi";
+            return $conn->query("SELECT * FROM 1mi ")->fetchAll(PDO::FETCH_ASSOC);
         } else if ($goal == 2) {
-            $dist = "5k";
+            return $conn->query("SELECT * FROM 5k ")->fetchAll(PDO::FETCH_ASSOC);
         } else if ($goal == 3) {
-            $dist = "10k";
+            return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
         }
         else {
-            $dist = null;
+            exit;
         }
-        return $conn->query("SELECT * FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
 //    function check_signin() {
@@ -117,11 +117,6 @@ class Dao
 
 }
 
-//    public function getGoods () {
-//        $stuff = file_get_contents($this->filename);
-//        $lines = explode("\n", trim($stuff));
-//        return $lines;
-//    }
 
 //    public function saveComment($name, $comment) {
 //        $this->logger->LogInfo("saveComment: [{$name}], [{$comment}]");
