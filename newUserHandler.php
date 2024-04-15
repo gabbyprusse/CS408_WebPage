@@ -30,6 +30,7 @@ session_start();
         if (count($errors) > 0) {
             $_SESSION["errors_newuser"] = $errors;
             header('Location: newUser.php');
+            exit;
         }
 
         // saves valid data
