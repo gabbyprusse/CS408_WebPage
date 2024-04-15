@@ -10,8 +10,6 @@
 <?php
     require_once "header.php";
     require_once "confiSession.php";
-    require_once "NUview.php";
-    require_once "SIview.php";
     require_once 'Dao.php';
     session_start();
 
