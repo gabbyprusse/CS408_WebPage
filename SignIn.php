@@ -36,7 +36,6 @@
   </form>
 
 <?php
-    check_login_errors();
     header('Profile.php');
 ?>
 

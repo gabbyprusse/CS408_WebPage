@@ -96,21 +96,21 @@ class Dao
         return $conn->query("SELECT * FROM {$dist} ")->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    function check_signin() {
-        if (isset($_SESSION['user_id'])) {
-            $id = $_SESSION['user_id'];
-            $query = "select * from users where id = '$id' limit 1";
-
-            $result = mysqli_query($dao, $query);
-            if ($result && mysqli_num_rows($result) > 0) {
-                $userdata = mysqli_fetch_assoc($result);
-                return $userdata;
-            }
-        }
-        //redirect to sign in
-        header("Location: SignIn.php");
-        die();
-    }
+//    function check_signin() {
+//        if (isset($_SESSION['user_id'])) {
+//            $id = $_SESSION['user_id'];
+//            $query = "select * from users where id = '$id' limit 1";
+//
+//            $result = mysqli_query($dao, $query);
+//            if ($result && mysqli_num_rows($result) > 0) {
+//                $userdata = mysqli_fetch_assoc($result);
+//                return $userdata;
+//            }
+//        }
+//        //redirect to sign in
+//        header("Location: SignIn.php");
+//        die();
+//    }
 
 }
 
