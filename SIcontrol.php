@@ -3,10 +3,7 @@
 declare(strict_types=1);
 error_reporting(-1);
 ini_set('display_errors', 'On');
-session_start();
 require_once "Dao.php";
-
-
 
 // accepts boolean and array parameter types
 function validateUsername(bool|array $result): bool
