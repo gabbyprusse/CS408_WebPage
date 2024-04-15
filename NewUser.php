@@ -1,6 +1,7 @@
 <?php
 
     require_once 'Dao.php';
+    session_start();
 ?>
 <html lang="en">
     <head>
