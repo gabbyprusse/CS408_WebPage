@@ -31,12 +31,12 @@ session_start();
             $_SESSION['errors_newuser'] = $errors;
             header('Location: newUser.php');
 
-            // saves valid data
-            $signUpData = [
-                "username" => $user,
-                "goal" => $goal
-            ];
-            $_SESSION["newuser_data"] = $signUpData;
+//            // saves valid data
+//            $signUpData = [
+//                "username" => $user,
+//                "goal" => $goal
+//            ];
+//            $_SESSION["newuser_data"] = $signUpData;
 //
 //            // submitting to users database
 //            if ($_SERVER["REQUEST_METHOD"] == "POST") {

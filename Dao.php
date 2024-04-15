@@ -51,7 +51,6 @@ class Dao
         // escapes injection
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
-        //$stmt->bindParam(":goal", $goal);
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
