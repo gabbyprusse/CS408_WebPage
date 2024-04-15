@@ -45,13 +45,13 @@ class Dao
     /*
      * gets user based on their username and all their info
      */
-    function getUser(string $user) {
+    function getUser($user) {
         $conn = $this->getConnection();
         $query = "SELECT * FROM users WHERE username = :username;";
         // escapes injection
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
-        $stmt->bindParam(":goal", $goal);
+        //$stmt->bindParam(":goal", $goal);
         $stmt->execute();
 
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
