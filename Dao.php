@@ -76,16 +76,9 @@ class Dao
     /*
      * gets the plan of the user based on their intended running goal
      */
-    public function getPlan($user)
+    public function getPlan($goal)
     {
         $conn = $this->getConnection();
-        $query = "SELECT goal FROM users WHERE username = :username;";
-        // escapes injection
-        $stmt = $conn->prepare($query);
-        $stmt->bindParam(":username", $user);
-        $stmt->execute();
-
-        $goal = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($goal == 1) {
             $dist = "1mi";
         } else if ($goal == 2) {
