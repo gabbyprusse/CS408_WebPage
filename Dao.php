@@ -89,12 +89,12 @@ class Dao
             return $conn->query("SELECT * FROM 1mi ")->fetchAll(PDO::FETCH_ASSOC);
         } else if ($goal == 2) {
             return $conn->query("SELECT * FROM 5k ")->fetchAll(PDO::FETCH_ASSOC);
-        } else if ($goal == 3) {
+        } else{
             return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
         }
-        else {
-            exit;
-        }
+//        else {
+//            exit;
+//        }
 
     }
 
