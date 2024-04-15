@@ -46,7 +46,6 @@ require_once 'SIcontrol.php';
     </thead>
     <?php
     $dao = new Dao();
-    $dao->getConnection();
     $lines = $dao->getPlan($_SESSION["user_username"]);
     foreach ($lines as $line) {
         echo "<tr><td>{$line['id']}</td>
