@@ -14,7 +14,7 @@
 //    exit();
 //}
 require_once 'header.php';
-if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
+if (isset($_SESSION['authenticated']) == 1) {
 } else {
     header("Location: about.php");
     exit();
