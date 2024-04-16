@@ -27,7 +27,7 @@ session_start();
         if ($dao->getUsername($user) != null) {
             $errors["usedUsername"] = "Username already taken";
         }
-
+    echo count($errors);
         // checks if any errors occurred
         if (count($errors) > 0) {
             $_SESSION['errors_newuser'] = $errors;
