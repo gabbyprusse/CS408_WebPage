@@ -15,13 +15,13 @@ function validateUsername($user, $result): bool
     }
 }
 
-function validatePwd($pwd, $hashPwd)
+function validatePwd($pwd, $hashPwd): bool
 {
     // verifies based on the hashed pwd
-    if (!password_verify($pwd, $hashPwd) || $hashPwd == null) {
-        return false;
-    } else {
+    if (password_verify($pwd, $hashPwd) && !$hashPwd == null) {
         return true;
+    } else {
+        return false;
     }
 }
 
