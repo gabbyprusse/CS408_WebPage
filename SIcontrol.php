@@ -15,7 +15,7 @@ function validateUsername($user, $result): bool
     }
 }
 
-function validatePwd($pwd, $hashPwd): bool
+function validatePwd($pwd, $hashPwd)
 {
     // verifies based on the hashed pwd
     if (!password_verify($pwd, $hashPwd) || $hashPwd == null) {
@@ -25,7 +25,7 @@ function validatePwd($pwd, $hashPwd): bool
     }
 }
 
-function user_empty(string $user): bool
+function user_empty(string $user)
 {
     if (empty($user)) {
         return true;
@@ -34,7 +34,7 @@ function user_empty(string $user): bool
     }
 }
 
-function pwd_empty(string $pwd): bool
+function pwd_empty(string $pwd)
 {
     if (empty($pwd)) {
         return true;
