@@ -75,8 +75,7 @@ class Dao
     /*
      * gets the plan of the user based on their intended running goal
      */
-    public function getPlan($user)
-    {
+    public function getPlan($user) {
         $conn = $this->getConnection();
         $query = "SELECT goal FROM users WHERE username = :username;";
         // escapes injection
@@ -89,30 +88,12 @@ class Dao
             return $conn->query("SELECT * FROM 1mi ")->fetchAll(PDO::FETCH_ASSOC);
         } else if ($goal == 2) {
             return $conn->query("SELECT * FROM 5k ")->fetchAll(PDO::FETCH_ASSOC);
-        } else {
+        } else if ($goal == 3) {
             return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
+        } else {
+            exit;
         }
-//        else {
-//            exit;
-//        }
-
     }
-
-//    function check_signin() {
-//        if (isset($_SESSION['user_id'])) {
-//            $id = $_SESSION['user_id'];
-//            $query = "select * from users where id = '$id' limit 1";
-//
-//            $result = mysqli_query($dao, $query);
-//            if ($result && mysqli_num_rows($result) > 0) {
-//                $userdata = mysqli_fetch_assoc($result);
-//                return $userdata;
-//            }
-//        }
-//        //redirect to sign in
-//        header("Location: SignIn.php");
-//        die();
-//    }
 
 }
 

@@ -9,8 +9,8 @@ $dao = new Dao();
 // ERROR HANDLERS
     $errors = [];
 //    if (isset($user) || isset($pwd)){
-        $user = $_POST['user'];
-        $pwd = $_POST['pwd'];
+        $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
+        $pwd = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
 //    }
 
 

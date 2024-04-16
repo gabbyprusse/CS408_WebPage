@@ -4,13 +4,13 @@ session_start();
         // ERROR HANDLERS
         $errors = [];
         // no username entered
-        $user = $_POST['username'];
+        $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
 
         // no pwd entered
-        $pwd = $_POST['pwd'];
+        $pwd = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');;
         if (0 == strlen($pwd)){
             $errors["emptyPwd"] = "Fill in Password";
         }

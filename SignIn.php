@@ -37,9 +37,7 @@
   </form>
 
 <?php
-    if (count($_SESSION['errors_signin']) == 0) {
-        header('Location: Profile.php');
-    }
+    header('Location: Profile.php');
 
 ?>
 
