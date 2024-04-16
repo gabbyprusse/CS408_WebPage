@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profile</title>
+    <title>Sign In</title>
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="SignIn.css">
 </head>
