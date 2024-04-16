@@ -4,18 +4,18 @@ session_start();
         // ERROR HANDLERS
         $errors = [];
         // no username entered
-        $user = htmlspecialchars($_GET['username'], ENT_QUOTES, 'UTF-8');
+        $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
 
         // no pwd entered
-        $pwd = htmlspecialchars($_GET['pwd'], ENT_QUOTES, 'UTF-8');;
+        $pwd = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         if (0 == strlen($pwd)){
             $errors["emptyPwd"] = "Fill in Password";
         }
         // no goal selected
-        $goal = $_GET['goal'];
+        $goal = $_POST['goal'];
         if (0 == strlen($goal)){
             $errors["emptyGoal"] = "Choose a Goal";
         }

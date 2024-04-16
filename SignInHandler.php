@@ -6,14 +6,14 @@ require_once 'SIcontrol.php';
 
 $dao = new Dao();
 
-// ERROR HANDLERS
-    $errors = [];
-//    if (isset($user) || isset($pwd)){
+
+        $errors = [];
+
         $user = htmlspecialchars($_POST['user'], ENT_QUOTES, 'UTF-8');
         $pwd = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
-//    }
 
 
+// ERROR HANDLERS
         // empty input
         if (user_empty($user)){
             $errors["emptyInput"] = "Fill in username";
@@ -33,7 +33,7 @@ $dao = new Dao();
         } else {
             $_SESSION['authenticated'] = true;
             $_SESSION['userId'] = $result['id'];
-            $_SESSION['user_username'] = htmlspecialchars($result['username'], ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401);
+            $_SESSION['user_username'] = $result['username'];
             $_SESSION['goal'] = $result['goal'];
 
             header("Location: Profile.php");
