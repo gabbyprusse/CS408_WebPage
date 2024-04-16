@@ -13,8 +13,6 @@
         <li>
             <a href="https://runningintheusa.com/classic/overview/">Upcoming Races </a>
         </li>
-
-        <li><a href="NewUser.php">Create Profile</a></li>
         <li><a href="About.php">Benefits of Running</a></li>
     </ul>
   <?php

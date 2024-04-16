@@ -23,14 +23,10 @@ $dao = new Dao();
             $errors["emptyInput"] = "Fill in password";
         }
 
-
         $result = $dao->getUser($user);
         // checks if user and pwd are false
         if (!validatePwd($pwd, $result["pwd"]) || !validateUsername($result)) {
             $errors["login_incorrect"] = "Incorrect login";
-        }
-
-        if (count($errors) > 0) {
             $_SESSION['authenticated'] = false;
             $_SESSION["errors_signin"] = $errors;
             header("Location: ../SignIn.php");

@@ -8,14 +8,12 @@
 <body>
 
 <?php
-//if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
-//} else {
-//    header("SignIn.php");
-//    exit();
-//}
 require_once 'header.php';
-if (isset($_SESSION['authenticated']) == 1) {
+
+// check for authentication
+if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
 } else {
+    header('Location: SignIn.php');
     exit();
 }
 require_once 'Dao.php';
