@@ -14,7 +14,6 @@
     <body>
     <?php
     require_once "header.php";
-    //$userdata = check_login($dao);
         if (isset($_SESSION['errors_newuser'])) {
             foreach ($_SESSION['errors_newuser'] as $message) {
                 echo "<div class='errors'>{$message}</div>";
