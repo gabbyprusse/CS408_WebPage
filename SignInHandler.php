@@ -7,9 +7,12 @@ require_once 'SIcontrol.php';
 $dao = new Dao();
 
 // ERROR HANDLERS
-$errors = [];
-$user = $_POST['user'];
-$pwd = $_POST['pwd'];
+    $errors = [];
+    if (isset($user) || isset($pwd)){
+        $user = $_POST['user'];
+        $pwd = $_POST['pwd'];
+    }
+
 
         // empty input
         if (user_empty($user)){
