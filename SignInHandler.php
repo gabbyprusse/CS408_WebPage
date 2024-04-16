@@ -6,9 +6,7 @@ require_once 'SIcontrol.php';
 
 $dao = new Dao();
 
-
         $errors = [];
-
         $user = htmlspecialchars($_POST['user'], ENT_QUOTES, 'UTF-8');
         $pwd = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
 

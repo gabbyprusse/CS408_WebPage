@@ -30,7 +30,7 @@
 
     <! ACTUAL CONTENT >
     <div>Form Method: <?= $_SERVER["REQUEST_METHOD"]?> </br></div>
-    <form method="POST" action="newUserHandler.php">
+    <form method="POST">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="applesauce"><br>
 
