@@ -12,6 +12,8 @@
     require_once 'Dao.php';
     session_start();  //automatically sets a cookie on the client and sends to browser
 
+    echo print_r($_POST);
+    echo print_r($_SESSION);
 
     if (isset($_SESSION['errors_signin'])) {
         foreach ($_SESSION['errors_signin'] as $error) {
