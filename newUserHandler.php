@@ -8,6 +8,7 @@ session_start();
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
+header('Location: Profile.php');
         // no pwd entered
         $pwd = $_POST['pwd'];
         if (0 == strlen($pwd)){
