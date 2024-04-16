@@ -36,9 +36,9 @@ session_start();
             // creates user
             $result = $dao->setUser($user, $pwd, $goal);
             $_SESSION['authenticated'] = true;
-            $_SESSION['userId'] = $result['id'];
-            $_SESSION['user_username'] = $user;
-            $_SESSION['goal'] = $goal;
+            //$_SESSION['userId'] = $result['id'];
+            $_SESSION['user_username'] = $_POST($user);
+            $_SESSION['goal'] = $_POST($goal);
             header('Location: Profile.php');
             die();
             }
