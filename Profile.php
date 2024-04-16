@@ -11,7 +11,7 @@
 require_once 'header.php';
 
 // check for authentication
-if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
+if (isset($_SESSION['authenticated'])) {
 } else {
     header('Location: SignIn.php');
     exit();
