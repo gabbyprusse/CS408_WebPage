@@ -2,7 +2,7 @@
 <html lang="en">
 <footer>
     <p>Here is the end of the page</p>
-    <p>Author: Gabby Prusse</p>
+    <p>Copyright 2024 Gabby Prusse</p>
 </footer>
 
 </html>
