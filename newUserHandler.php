@@ -5,6 +5,7 @@ session_start();
         $errors = [];
         // no username entered
         $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
+        echo $user;
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
