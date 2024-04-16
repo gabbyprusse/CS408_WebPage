@@ -30,7 +30,7 @@ session_start();
         // checks if any errors occurred
         if (count($errors) > 0) {
             $_SESSION['errors_newuser'] = $errors;
-            header('Location: newUser.php');
+            //header('Location: newUser.php');
 
         } else {
             // creates user
