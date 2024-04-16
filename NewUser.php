@@ -14,8 +14,10 @@
     <body>
     <?php
     require_once "header.php";
-    echo print_r($_POST);
-    echo print_r($_SESSION);
+
+    echo print_r($_POST, 1);
+    echo print_r($_SESSION, 1);
+
         if (isset($_SESSION['errors_newuser'])) {
             foreach ($_SESSION['errors_newuser'] as $message) {
                 echo "<div class='errors'>{$message}</div>";
