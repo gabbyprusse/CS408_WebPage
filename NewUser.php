@@ -38,13 +38,13 @@
 
             <p>
             <label for="goal">How far do you want to run?</label> <br>
-                <input type="radio" id="1" name="goal" value="1">
+                <label for="1"></label><input type="radio" id="1" name="goal" value="1">
                 <label>1 mile</label> <br>
 
-                <input type="radio" id="2" name="goal" value="2">
+                <label for="2"></label><input type="radio" id="2" name="goal" value="2">
                 <label>5k (3ish miles)</label> <br>
 
-                <input type="radio" id="3" name="goal" value="3">
+                <label for="3"></label><input type="radio" id="3" name="goal" value="3">
                 <label>10k (6ish miles)</label> <br>
         <p>
             <input class="button" type="submit" value="Create Profile">
