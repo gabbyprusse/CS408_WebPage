@@ -8,10 +8,10 @@ $dao = new Dao();
 
 // ERROR HANDLERS
     $errors = [];
-    if (isset($user) || isset($pwd)){
+//    if (isset($user) || isset($pwd)){
         $user = $_POST['user'];
         $pwd = $_POST['pwd'];
-    }
+//    }
 
 
         // empty input
