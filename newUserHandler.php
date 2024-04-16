@@ -31,22 +31,13 @@ session_start();
         if (count($errors) > 0) {
             $_SESSION['errors_newuser'] = $errors;
             header('Location: newUser.php');
-
-            // saves valid data
-            $signUpData = [
-                "username" => $user,
-                "goal" => $goal
-            ];
-            $_SESSION["newuser_data"] = $signUpData;
-
-            // submitting to users database
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // something was posted so data is to be collected/saved
-                $user = $_POST["username"];
-                $pwd = $_POST["pwd"];
-                $goal = $_POST["goal"];
-                exit;
-            }
+//
+//            // saves valid data
+//            $signUpData = [
+//                "username" => $user,
+//                "goal" => $goal
+//            ];
+//            $_SESSION["newuser_data"] = $signUpData;
         } else {
             // creates user
             $result = $dao->setUser($user, $pwd, $goal);
