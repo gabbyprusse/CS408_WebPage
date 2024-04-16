@@ -8,13 +8,18 @@ $dao = new Dao();
 
 // ERROR HANDLERS
 $errors = [];
-$user = $_GET['user'];
-$pwd = $_GET['pwd'];
+$user = $_POST['user'];
+$pwd = $_POST['pwd'];
 
         // empty input
-        if (input_empty($user, $pwd)){
-            $errors["emptyInput"] = "Fill in all fields";
+        if (user_empty($user)){
+            $errors["emptyInput"] = "Fill in username";
         }
+        // empty input
+        if (pwd_empty($pwd)){
+            $errors["emptyInput"] = "Fill in password";
+        }
+
 
         $result = $dao->getUser($user);
         // checks if user and pwd are false

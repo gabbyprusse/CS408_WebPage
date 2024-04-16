@@ -25,9 +25,18 @@ function validatePwd(string $pwd, string $hashPwd): bool
     }
 }
 
-function input_empty(string $user, string $pwd): bool
+function user_empty(string $user): bool
 {
-    if (empty($user) || empty($pwd)) {
+    if (empty($user)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function pwd_empty(string $pwd): bool
+{
+    if (empty($pwd)) {
         return true;
     } else {
         return false;
