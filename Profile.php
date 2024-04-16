@@ -16,7 +16,6 @@
 require_once 'header.php';
 if (isset($_SESSION['authenticated']) == 1) {
 } else {
-    header("Location: about.php");
     exit();
 }
 require_once 'Dao.php';
