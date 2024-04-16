@@ -23,7 +23,7 @@
 }
 ?>
     <div>Form Method: <?= $_SERVER["REQUEST_METHOD"]?> </br></div>
-  <form action="SignInHandler.php" method="POST">
+  <form method="POST">
     <br>
     <label for="user">Username:</label><br>
     <input type="text" id="user" name="user" value=""><br>
