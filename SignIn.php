@@ -37,7 +37,6 @@
   </form>
 
 <?php
-    header('Location: Profile.php');
 
 ?>
 
