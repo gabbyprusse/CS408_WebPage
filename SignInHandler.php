@@ -33,7 +33,7 @@ $dao = new Dao();
         } else {
             $_SESSION['authenticated'] = true;
             $_SESSION['userId'] = $result['id'];
-            $_SESSION['user_username'] = $result['username'];
+            $_SESSION['user_username'] = $_POST['username'];
             $_SESSION['goal'] = $result['goal'];
 
             header("Location: Profile.php");
