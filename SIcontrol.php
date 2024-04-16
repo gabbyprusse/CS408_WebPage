@@ -6,16 +6,16 @@ ini_set('display_errors', 'On');
 require_once "Dao.php";
 
 // accepts boolean and array parameter types
-function validateUsername(bool|array $result): bool
+function validateUsername($user, $result): bool
 {
-    if (!$result) {
+    if ($result == $user) {
         return true;
     } else {
         return false;
     }
 }
 
-function validatePwd(string $pwd, string $hashPwd): bool
+function validatePwd($pwd, $hashPwd): bool
 {
     // verifies based on the hashed pwd
     if (!password_verify($pwd, $hashPwd) || $hashPwd == null) {
