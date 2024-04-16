@@ -20,6 +20,7 @@ $dao = new Dao();
         if (pwd_empty($pwd)){
             $errors["emptyInput"] = "Fill in password";
         }
+$_SESSION["errors_signin"] = $errors;
 
         $result = $dao->getUser($user);
         // checks if user and pwd are false
