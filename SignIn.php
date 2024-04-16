@@ -23,7 +23,7 @@
 }
 ?>
 
-  <form method="post" action="SignInHandler.php">
+  <form method="POST" action="SignInHandler.php">
     <br>
     <label for="user">Username:</label><br>
     <input type="text" id="user" name="user" value=""><br>

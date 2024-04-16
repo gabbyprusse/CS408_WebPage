@@ -28,7 +28,7 @@
         ?>
 
     <! ACTUAL CONTENT >
-    <form method="post" action="newUserHandler.php">
+    <form method="POST" action="newUserHandler.php">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="applesauce"><br>
 
