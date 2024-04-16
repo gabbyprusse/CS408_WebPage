@@ -18,7 +18,7 @@ function validateUsername(bool|array $result): bool
 function validatePwd(string $pwd, string $hashPwd): bool
 {
     // verifies based on the hashed pwd
-    if (!password_verify($pwd, $hashPwd)) {
+    if (!password_verify($pwd, $hashPwd) || $hashPwd == null) {
         return false;
     } else {
         return true;
