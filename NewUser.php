@@ -16,6 +16,7 @@
     require_once "header.php";
 
     echo print_r($_POST, 1);
+    echo print_r($_GET, 1);
     echo print_r($_SESSION, 1);
 
         if (isset($_SESSION['errors_newuser'])) {
@@ -29,7 +30,7 @@
 
     <! ACTUAL CONTENT >
     <div>Form Method: <?= $_SERVER["REQUEST_METHOD"]?> </br></div>
-    <form method="GET" action="newUserHandler.php">
+    <form method="POST" action="newUserHandler.php">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="applesauce"><br>
 
