@@ -1,8 +1,3 @@
-<?php
-
-    require_once 'Dao.php';
-    session_start();
-?>
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
@@ -14,6 +9,8 @@
     <body>
     <?php
     require_once "header.php";
+    require_once 'Dao.php';
+    session_start();
 
     echo print_r($_POST, 1);
     echo print_r($_SESSION, 1);
