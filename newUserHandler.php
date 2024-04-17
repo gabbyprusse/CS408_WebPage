@@ -34,7 +34,7 @@ session_start();
             $errors["usedUsername"] = "Username already taken";
         }
         // checks if any errors occurred
-        if (count($errors) > 0) {
+        if (isset($_SESSION['errors_newuser'])) {
             $_SESSION['errors_newuser'] = $errors;
             //header('Location: newUser.php');
 
