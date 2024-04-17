@@ -32,7 +32,7 @@ $dao = new Dao();
             }
                 if(!password_verify($pwd, $result['pwd'])) {
                 $errors["pwdWrong"] = "pwd wrong " . $result["pwd"] . " " . $pwd; }
-            if (!validateUsername($user, $result)) {
+            if (!validateUsername($user, $result['username'])) {
                 $errors["userWrong"] = "user wrong " . $result["username"] . " " . $user;
                 $errors["login_incorrect"] = "Incorrect login";
             }
