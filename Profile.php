@@ -27,6 +27,7 @@ require_once 'SIcontrol.php';
     <em>Consistency is the key to achieving your goals!</em>
 </div>
 
+<?php header("Location: ../main.php"); ?>
 
 <a class="print" href="javascript:void(0);" onclick="printPlan('tabL')">Print your Plan</a>
 
