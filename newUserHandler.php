@@ -15,7 +15,7 @@ session_start();
         if (preg_match_all($pattern, $_POST['pwd']) <= 0) {
             $errors['invalidPwd'] = "Password must contain at least one number";
         }
-header('Location: Profile.php');
+
 
       // no pwd entered
         $pwd = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
