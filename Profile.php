@@ -83,7 +83,7 @@ require_once 'Dao.php';
         document.body.innerHTML = printContent;
         window.print();
         document.body = ogContent;
-        <?php header("Location: ../Profile.php"); ?>
+        <?php header("Location: Profile.php"); ?>
     }
 </script>
 
