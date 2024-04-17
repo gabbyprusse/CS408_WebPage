@@ -9,21 +9,21 @@ require_once "Dao.php";
 function validateUsername($user, $result): bool
 {
     if ($result == $user) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 
-//function validatePwd($pwd, $hashPwd): bool
-//{
-//    // verifies based on the hashed pwd
-//    if (password_verify($pwd, $hashPwd)) {
-//        return true;
-//    } else {
-//        return false;
-//    }
-//}
+function validatePwd($pwd, $hashPwd): bool
+{
+    // verifies based on the hashed pwd
+    if (password_verify($pwd, $hashPwd)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function user_empty(string $user)
 {
