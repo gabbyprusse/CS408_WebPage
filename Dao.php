@@ -79,7 +79,7 @@ class Dao
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":username", $user);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $goal = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($goal == 1) {
             return $conn->query("SELECT * FROM 1mi ")->fetchAll(PDO::FETCH_ASSOC);
@@ -88,7 +88,7 @@ class Dao
         } else if ($goal == 3) {
             return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
         } else {
-            exit;
+            $stmt->fetch(PDO::FETCH_ASSOC);
         }
     }
 
