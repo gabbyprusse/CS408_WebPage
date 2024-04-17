@@ -1,7 +1,7 @@
 CREATE TABLE users (
     id int(11) NOT NULL AUTO_INCREMENT,
     username VARCHAR(100) NOT NULL,
-    pwd VARCHAR(100) NOT NULL,
+    pwd VARCHAR(255) NOT NULL,
     goal int NOT NULL,
     PRIMARY KEY (id)
 );
