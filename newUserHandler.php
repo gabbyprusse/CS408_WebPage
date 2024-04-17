@@ -34,10 +34,11 @@ session_start();
         if ($dao->getUsername($user) != null) {
             $errors["usedUsername"] = "Username already taken";
         }
+        $_SESSION['errors_newuser'] = $errors;
         // checks if any errors occurred
-        if (isset($_SESSION['errors_newuser'])) {
-            $_SESSION['errors_newuser'] = $errors;
-            //header('Location: newUser.php');
+        if (isset($_SESSION['errors_newuser']) && $_SESSION['errors_newuser']) {
+            //$_SESSION['errors_newuser'] = $errors;
+            header('Location: newUser.php');
 
         } else {
             // creates user
