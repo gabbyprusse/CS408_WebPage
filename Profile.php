@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Running for NonRunners</title>
+    <title>Profile</title>
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="Profile.css">
 </head>
