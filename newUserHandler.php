@@ -5,12 +5,18 @@ session_start();
         $errors = [];
         // no username entered
         $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
-        echo $user;
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
 
-        // no pwd entered
+
+    // pwd reg expression : pwd needs a num in it
+        $pattern = "/\d/";
+        if (preg_match_all($pattern, $_POST['pwd']) <= 0) {
+            $errors['invalidPwd'] = "Password must contain at least one number";
+        }
+
+      // no pwd entered
         $pwd = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         if (0 == strlen($pwd)){
             $errors["emptyPwd"] = "Fill in Password";
