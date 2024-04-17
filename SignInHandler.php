@@ -32,7 +32,7 @@ $dao = new Dao();
         $_SESSION["errors_signin"] = $errors;
         if (count($_SESSION['errors_signin']) == 0) {
             $_SESSION['yes'] = true;
-            $_SESSION['userId'] = $result['id'];
+            //$_SESSION['userId'] = $result['id'];
             $_SESSION['user'] = $result['username'];
             $_SESSION['goal'] = $result['goal'];
             header("Location: ../Profile.php");
