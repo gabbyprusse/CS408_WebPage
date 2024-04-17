@@ -50,7 +50,7 @@ session_start();
                 //$_SESSION['userId'] = $result['id'];
                 $_SESSION['user'] = $user;
                 $_SESSION['goal'] = $goal;
-                header('Location: Profile.php');
+                header('Location: main.php');
 
             } else {
                 header('Location: newUser.php');

@@ -35,7 +35,7 @@ $dao = new Dao();
             //$_SESSION['userId'] = $result['id'];
             $_SESSION['user'] = $result['username'];
             $_SESSION['goal'] = $result['goal'];
-            header("Location: ../Profile.php");
+           // header("Location: ../Profile.php");
         } else {
             header("Location: ../SignIn.php");
         }
