@@ -47,10 +47,6 @@
         <a href="SignIn.php">Sign in with Existing Profile</a>
     </form>
 
-    <?php
-        header('Profile.php');
-    ?>
-
     <?php require_once "footer.php"; ?>
     </body>
 </html>

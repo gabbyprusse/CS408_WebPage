@@ -33,9 +33,6 @@
       <a href="NewUser.php">Create Profile</a>
   </form>
 
-<?php
-
-?>
 
 <?php require_once "footer.php"; ?>
 
