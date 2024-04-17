@@ -26,16 +26,9 @@ $dao = new Dao();
         $result = $dao->getUser($user);
         // checks if user and pwd are false
         if (!user_empty($user) && !pwd_empty($pwd)){
-            if($result["pwd"] == null)
-            {
-                $errors["nullPwd"] = "nullPwd";
-            }
-                if(!password_verify($pwd, $result['pwd'])) {
-                $errors["pwdWrong"] = "pwd wrong " . $result["pwd"] . " " . $pwd; }
-            if (!validateUsername($user, $result['username'])) {
-                $errors["userWrong"] = "user wrong " . $result["username"] . " " . $user;
+            if($result["pwd"] == null || (!password_verify($pwd, $result['pwd'])) || !validateUsername($user, $result['username']))
+
                 $errors["login_incorrect"] = "Incorrect login";
-            }
                 $_SESSION['authenticated'] = false;
                 $_SESSION["errors_signin"] = $errors;
                 header("Location: ../SignIn.php");
