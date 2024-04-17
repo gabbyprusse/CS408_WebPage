@@ -24,7 +24,6 @@ if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
 }
 require_once 'Dao.php';
-require_once 'SIcontrol.php';
 
 ?>
 <div>
