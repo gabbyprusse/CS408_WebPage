@@ -10,7 +10,6 @@ $dao = new Dao();
         $user = htmlspecialchars($_POST['user'], ENT_QUOTES, 'UTF-8');
         $pwd = $_POST['pwd'];
 
-
 // ERROR HANDLERS
         // empty input
         if (user_empty($user)){
