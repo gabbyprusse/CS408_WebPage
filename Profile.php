@@ -10,10 +10,10 @@
 <?php
 require_once 'header.php';
 
-// check for authentication
-if (!isset($_SESSION['yes'])) {
-    header('Location: SignIn.php');
-}
+//// check for authentication
+//if (!isset($_SESSION['yes'])) {
+//    header('Location: SignIn.php');
+//}
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
