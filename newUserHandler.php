@@ -40,8 +40,10 @@ session_start();
             if ($dao->getUsername($user) != null) {
                 $errors["usedUsername"] = "Username already taken";
             }
+
             $_SESSION['errors_newuser'] = $errors;
-            // checks if any errors occurred
+
+            // checks if any errors occurred, by seeing if array is empty
             if ($_SESSION['errors_newuser']) {
                 header('Location: newUser.php');
 
