@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 cs408_webdev/
+web: vendor/bin/heroku-php-apache2 cs408_webdev/ public/

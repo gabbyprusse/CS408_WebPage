@@ -8,5 +8,9 @@
             "Gabbyprusse\\Cs408\\": "src/"
         }
     },
-    "require": {}
+    "require": {},
+    "post-install-cmd": [
+    "php artisan clear-compiled",
+    "chmod -R 777 public/"
+]
 }
