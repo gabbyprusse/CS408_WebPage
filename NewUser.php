@@ -19,8 +19,8 @@
     echo print_r($_SESSION, 1);
 
         if (isset($_SESSION['errors_newuser'])) {
-            foreach ($_SESSION['errors_newuser'] as $message) {
-                echo "<div class='errors'>{$message}</div>";
+            foreach ($_SESSION['errors_newuser'] as $error) {
+                echo "<div class='error'>{$error}</div>";
             }
             unset($_SESSION['errors_newuser']);
         }
