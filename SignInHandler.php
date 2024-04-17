@@ -28,7 +28,7 @@ $dao = new Dao();
         if (!user_empty($user) && !pwd_empty($pwd)) {
             if ($result["pwd"] == null) {
                 $errors['nullPwd'] = $result['pwd'];
-            } if (!password_verify($pwd, $result['pwd'])){
+            } if (!validatePwd($pwd, $result['pwd'])){
                 $errors["pwd"] = "pwd" . $pwd . " " . $result['pwd'];
             }
             if (!validateUsername($user, $result['username']))

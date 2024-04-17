@@ -1,6 +1,9 @@
 <?php
 
 declare(strict_types=1);
+
+use Crypto\Hash;
+
 error_reporting(-1);
 ini_set('display_errors', 'On');
 require_once "Dao.php";
@@ -18,10 +21,10 @@ function validateUsername($user, $result): bool
 function validatePwd($pwd, $hashPwd): bool
 {
     // verifies based on the hashed pwd
-    if (password_verify($pwd, $hashPwd)) {
-        return false;
-    } else {
+    if (Hash::check($pwd, $hashPwd)) {
         return true;
+    } else {
+        return false;
     }
 }
 
