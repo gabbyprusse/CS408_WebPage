@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Crypto\Hash;
 
 error_reporting(-1);
 ini_set('display_errors', 'On');
@@ -21,7 +20,7 @@ function validateUsername($user, $result): bool
 function validatePwd($pwd, $hashPwd): bool
 {
     // verifies based on the hashed pwd
-    if (Hash::check($pwd, $hashPwd)) {
+    if (password_verify($pwd, $hashPwd)) {
         return true;
     } else {
         return false;
