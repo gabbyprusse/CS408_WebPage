@@ -15,7 +15,6 @@ session_start();
             $errors['invalidUsername'] = "Username must be one word";
         }
 
-
     // pwd reg expression : pwd needs a num in it
         $pattern = "/\d/";
         if (preg_match_all($pattern, $_POST['pwd']) <= 0) {
