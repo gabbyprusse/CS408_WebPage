@@ -31,7 +31,7 @@ $dao = new Dao();
         }
 
         $_SESSION["errors_signin"] = $errors;
-        if (count($_SESSION['errors_signin']) === 0) {
+        if (count($_SESSION['errors_signin']) == 0) {
             $_SESSION['yes'] = true;
             $_SESSION['userId'] = $result['id'];
             $_SESSION['user_username'] = $result['username'];
