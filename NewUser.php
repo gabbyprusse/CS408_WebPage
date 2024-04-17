@@ -24,10 +24,10 @@
 
     <form action='newUserHandler.php' method="POST">
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" value= <?php $_POST['username']?>> <br>
+        <input type="text" id="username" name="username" value= <?php $_POST['username']?>/> <br>
 
         <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd" placeholder="shhhhhh" value= <?php $_POST['pwd']?>><br><br>
+        <input type="password" id="pwd" name="pwd" placeholder="shhhhhh" value= <?php $_POST['pwd']?>/><br><br>
 
             <p>
             <label for="goal">How far do you want to run?</label> <br>
