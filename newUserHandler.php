@@ -40,7 +40,7 @@ session_start();
 
         } else {
             // creates user
-            $result = $dao->setUser($user, $pwd, $goal);
+            $dao->setUser($user, $pwd, $goal);
             $_SESSION['authenticated'] = true;
             //$_SESSION['userId'] = $result['id'];
             $_SESSION['user_username'] = $_POST($user);
