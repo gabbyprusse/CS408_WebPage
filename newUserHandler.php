@@ -44,18 +44,18 @@ session_start();
             $_SESSION['errors_newuser'] = $errors;
 
             // checks if any errors occurred, by seeing if array is empty
-            if ($_SESSION['errors_newuser']) {
-                header('Location: newUser.php');
-
-            } else {
+            if (count($_SESSION['errors_newuser']) === 0) {
                 // creates user
                 $dao->setUser($user, $pwd, $goal);
-                $_SESSION['authenticated'] = true;
+                $_SESSION['yes'] = true;
                 //$_SESSION['userId'] = $result['id'];
                 $_SESSION['user_username'] = $_POST($user);
                 $_SESSION['goal'] = $_POST($goal);
                 header('Location: Profile.php');
-                die();
+
+            } else {
+                header('Location: newUser.php');
+
             }
 
 
