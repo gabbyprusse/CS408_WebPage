@@ -8,7 +8,7 @@ session_start();
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
         }
-
+header('Location: Profile.php');
 
     // pwd reg expression : pwd needs a num in it
         $pattern = "/\d/";
