@@ -22,7 +22,7 @@ ini_set('display_errors', 'On');
 /// google font
 
 // check for authentication
-if (!isset($_SESSION['yes'])) {
+if (!isset($_SESSION['yes']) && $_SESSION['yes']) {
     header('Location: SignIn.php');
 }
 require_once 'Dao.php';
