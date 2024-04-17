@@ -1,5 +1,7 @@
 
-  <h1>Running from My Problems ...<img src="img.png" alt="cool pic"></h1>
+</head>
+<body>
+<h1 id="title">Running from My Problems ...<img src="img.png" alt="cool pic"></h1>
 
     <ul class="MainPage">
         <li><a href="main.php">Home</a> </li>

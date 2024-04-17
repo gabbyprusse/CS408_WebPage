@@ -5,6 +5,9 @@
     <title>Sign In</title>
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="SignIn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php
