@@ -14,13 +14,14 @@ $dao = new Dao();
 // ERROR HANDLERS
         // empty input
         if (user_empty($user)){
-            $errors["emptyInput"] = "Fill in username";
+            $errors["emptyUser"] = "Fill in username";
         }
         // empty input
         if (pwd_empty($pwd)){
-            $errors["emptyInput"] = "Fill in password";
+            $errors["emptyPwd"] = "Fill in password";
         }
-$_SESSION["errors_signin"] = $errors;
+
+        $_SESSION["errors_signin"] = $errors;
 
 
         // checks if user and pwd are false
