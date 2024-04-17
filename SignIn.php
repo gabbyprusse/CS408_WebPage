@@ -20,7 +20,6 @@
         unset($_SESSION['errors_signin']);
 }
 ?>
-    <div>Form Method: <?= $_SERVER["REQUEST_METHOD"]?> </br></div>
   <form action='SignInHandler.php' method="POST">
     <br>
     <label for="user">Username:</label><br>

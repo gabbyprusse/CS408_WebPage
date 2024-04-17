@@ -22,8 +22,6 @@
 
         ?>
 
-    <! ACTUAL CONTENT >
-    <div>Form Method: <?= $_SERVER["REQUEST_METHOD"]?> </br></div>
     <form action='newUserHandler.php' method="POST">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="applesauce"><br>
