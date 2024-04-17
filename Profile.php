@@ -9,6 +9,7 @@
 
 <?php
 require_once 'header.php';
+session_start();
 
 //// check for authentication
 //if (!isset($_SESSION['yes'])) {
