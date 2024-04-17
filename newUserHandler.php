@@ -42,7 +42,7 @@ session_start();
             }
             $_SESSION['errors_newuser'] = $errors;
             // checks if any errors occurred
-            if (isset($_SESSION['errors_newuser']) && $_SESSION['errors_newuser']) {
+            if ($_SESSION['errors_newuser']) {
                 header('Location: newUser.php');
 
             } else {
