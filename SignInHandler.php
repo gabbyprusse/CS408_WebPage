@@ -45,6 +45,5 @@ $dao = new Dao();
 
             header("Location: Profile.php");
         } else {
-            $_SESSION['authenticated'] = false;
             header("Location: ../SignIn.php");
         }
