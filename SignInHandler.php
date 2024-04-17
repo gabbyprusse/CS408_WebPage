@@ -31,8 +31,7 @@ $dao = new Dao();
                 $errors["nullPwd"] = "nullPwd";
             }
                 if(!validatePwd($pwd, $result["pwd"])){
-                    echo $result["pwd"];
-                    echo $pwd;
+                    ?>$result["pwd"] <br> $pwd <?php
                     $errors["pwdWrong"] = "pwd wrong";
                 } if (!validateUsername($user, $result)) {
                     echo $result;
