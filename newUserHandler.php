@@ -13,7 +13,7 @@ session_start();
     // pwd reg expression : pwd needs a num in it
         $pattern = "/\d/";
         if (preg_match_all($pattern, $_POST['pwd']) <= 0) {
-            $errors['invalidPwd'] = "Password must contain at least one number";
+            $errors['invalidPwd'] = "Password must contain a number";
         }
 
 
