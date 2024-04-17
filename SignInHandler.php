@@ -40,6 +40,7 @@ $dao = new Dao();
                 $_SESSION['authenticated'] = false;
                 header("Location: ../SignIn.php");
         } else {
+            header("Location: ../main.php");
             $_SESSION['authenticated'] = true;
             $_SESSION['userId'] = $result['id'];
             $_SESSION['user_username'] = $_POST['username'];
