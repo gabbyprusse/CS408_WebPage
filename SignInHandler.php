@@ -21,18 +21,13 @@ $dao = new Dao();
             $errors["emptyPwd"] = "Fill in password";
         }
 
-        $_SESSION["errors_signin"] = $errors;
-
         $result = $dao->getUser($user);
-        // checks if user and pwd are false
-        if (!user_empty($user) && !pwd_empty($pwd)) {
-            if ($result["pwd"] == null) {
-                $errors['nullPwd'] = $result['pwd'];
-            } if (!validatePwd($pwd, $result['pwd'])){
-                $errors["pwd"] = "pwd" . $pwd . " " . $result['pwd'];
-            }
-            if (!validateUsername($user, $result['username']))
-                $errors["login_incorrect"] = "Incorrect login";
+        // checks if user has a profile
+        if ($result["pwd"] == null || $result["username"] == null) {
+            $errors["noProfile"] = "Incorrect login";
+            // checks if user and pwd are valid
+        } else if (!validatePwd($pwd, $result['pwd']) || !validateUsername($user, $result['username'])) {
+            $errors["login_incorrect"] = "Incorrect login";
         }
 
         $_SESSION["errors_signin"] = $errors;
