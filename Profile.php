@@ -46,7 +46,7 @@ require_once 'SIcontrol.php';
     </thead>
     <?php
     $dao = new Dao();
-    $lines = $dao->getPlan($_SESSION['user']);
+    $lines = $dao->getPlan($_SESSION['goal']);
     foreach ($lines as $line) {
         echo "<tr><td>{$line['id']}</td>
         <td>{$line['monday']}</td>
