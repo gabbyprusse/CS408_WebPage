@@ -23,7 +23,7 @@
   <form action='SignInHandler.php' method="POST">
     <br>
     <label for="user">Username:</label><br>
-    <input type="text" id="user" name="user" value=""><br>
+    <input type="text" id="user" name="user" value="<?php echo isset($_POST['usern']) ? $_POST['user'] : '' ?>""><br>
 
     <label for="pwd">Password:</label><br>
     <input type="password" id="pwd" name="pwd" value=""><br><br>
