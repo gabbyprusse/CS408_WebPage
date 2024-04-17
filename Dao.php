@@ -81,11 +81,11 @@ class Dao
         $stmt->execute();
         $goal = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($goal == 1) {
+        if ($query == 1) {
             return $conn->query("SELECT * FROM 1mi ")->fetchAll(PDO::FETCH_ASSOC);
-        } else if ($goal == 2) {
+        } else if ($query == 2) {
             return $conn->query("SELECT * FROM 5k ")->fetchAll(PDO::FETCH_ASSOC);
-        } else if ($goal == 3) {
+        } else if ($query == 3) {
             return $conn->query("SELECT * FROM 10k ")->fetchAll(PDO::FETCH_ASSOC);
         } else {
             exit;
