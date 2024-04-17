@@ -30,11 +30,10 @@ $dao = new Dao();
             {
                 $errors["nullPwd"] = "nullPwd";
             }
-                if(!validatePwd($pwd, $result["pwd"])){
-                    $errors["pwdWrong"] = "pwd wrong " . $result["pwd"] . " " . $pwd;
-                } if (!validateUsername($user, $result)) {
-                    echo $result;
-                    echo $user;
+                if(!password_verify($pwd, $result['pwd'])) {
+                $errors["pwdWrong"] = "pwd wrong " . $result["pwd"] . " " . $pwd; }
+            if (!validateUsername($user, $result)) {
+                $errors["userWrong"] = "user wrong " . $result["username"] . " " . $user;
                 $errors["login_incorrect"] = "Incorrect login";
             }
                 $_SESSION['authenticated'] = false;

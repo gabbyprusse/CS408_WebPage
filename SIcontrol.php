@@ -15,15 +15,15 @@ function validateUsername($user, $result): bool
     }
 }
 
-function validatePwd($pwd, $hashPwd): bool
-{
-    // verifies based on the hashed pwd
-    if (password_verify($pwd, $hashPwd)) {
-        return true;
-    } else {
-        return false;
-    }
-}
+//function validatePwd($pwd, $hashPwd): bool
+//{
+//    // verifies based on the hashed pwd
+//    if (password_verify($pwd, $hashPwd)) {
+//        return true;
+//    } else {
+//        return false;
+//    }
+//}
 
 function user_empty(string $user)
 {
