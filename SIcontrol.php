@@ -8,10 +8,10 @@ require_once "Dao.php";
 // accepts boolean and array parameter types
 function validateUsername($user, $result): bool
 {
-    if ($result == $user) {
-        return false;
-    } else {
+    if (strcmp($result, $user) == 0) {
         return true;
+    } else {
+        return false;
     }
 }
 
