@@ -12,8 +12,6 @@
     require_once 'Dao.php';
     session_start();
 
-    echo print_r($_POST, 1);
-    echo print_r($_SESSION, 1);
 
         if (isset($_SESSION['errors_newuser'])) {
             foreach ($_SESSION['errors_newuser'] as $error) {
