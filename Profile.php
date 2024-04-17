@@ -11,6 +11,14 @@
 require_once 'header.php';
 session_start();
 
+
+///////??????????
+/// todo:
+/// repopulate on errors
+/// print in javascript
+/// jquery or ajax for errors
+/// google font
+
 // check for authentication
 if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
