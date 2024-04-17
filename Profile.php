@@ -20,9 +20,9 @@ session_start();
 /// google font
 
 // check for authentication
-if (!isset($_SESSION['yes'])) {
-    header('Location: SignIn.php');
-}
+//if (!isset($_SESSION['yes'])) {
+//    header('Location: SignIn.php');
+//}
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
