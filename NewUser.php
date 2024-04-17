@@ -24,10 +24,10 @@
 
     <form action='newUserHandler.php' method="POST">
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="applesauce"><br>
+        <input type="text" id="username" name="username" placeholder="applesauce" value="{{ old('username') }}"><br>
 
         <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd" placeholder="shhhhhh"><br><br>
+        <input type="password" id="pwd" name="pwd" placeholder="shhhhhh" value="{{ old('pwd') }}"><br><br>
 
             <p>
             <label for="goal">How far do you want to run?</label> <br>
