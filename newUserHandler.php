@@ -11,7 +11,7 @@ session_start();
 
         // username reg expression : no white space
         $pattern = "/\s/";
-        if (!preg_match_all($pattern, $_POST['username'])) {
+        if (preg_match($pattern, $_POST['username']) == null) {
             $errors['invalidUsername'] = "Username should not contain whitespace";
         }
 
