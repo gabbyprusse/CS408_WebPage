@@ -38,8 +38,9 @@ a {
     color: #885c39;
 }
 
-div.notes {
-    margin-left: 30px;
+
+div.notes, .print {
+    margin-left: 50%;
 }
 
 

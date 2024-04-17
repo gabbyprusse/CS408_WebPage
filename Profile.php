@@ -28,7 +28,7 @@ require_once 'SIcontrol.php';
 </div>
 
 
-<a href="javascript:void(0);" onclick="printPlan('tabL')">Print your Plan</a>
+<a class="print" href="javascript:void(0);" onclick="printPlan('tabL')">Print your Plan</a>
 
 <div id="tabL">
 <table id="plan">
