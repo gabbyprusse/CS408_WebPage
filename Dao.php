@@ -93,25 +93,3 @@ class Dao
     }
 
 }
-
-
-//    public function saveComment($name, $comment) {
-//        $this->logger->LogInfo("saveComment: [{$name}], [{$comment}]");
-//        $conn = $this->getConnection();
-//        $saveQuery =
-//            "INSERT INTO comments
-//            (comment, name)
-//            VALUES
-//            (:comment, :name)";
-//        $q = $conn->prepare($saveQuery);
-//        $q->bindParam(":comment", $comment);
-//        $q->bindParam(":name", $name);
-//        $q->execute();
-//    }
-
-//    public function getComments () {
-//        $conn = $this->getConnection();
-//        return $conn->query("SELECT comment, date_entered, id FROM comments ORDER BY date_entered desc")->fetchAll(PDO::FETCH_ASSOC);
-//    }
-//
-//}
