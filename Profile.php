@@ -13,7 +13,6 @@ require_once 'header.php';
 // check for authentication
 if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
-    exit();
 }
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
