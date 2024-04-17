@@ -36,7 +36,7 @@ $dao = new Dao();
         }
 
         $_SESSION["errors_signin"] = $errors;
-        if (isset($_SESSION['errors_signin']) && $_SESSION['errors_signin']) {
+        if ($_SESSION['errors_signin']) {
                 $_SESSION['authenticated'] = false;
                 header("Location: ../SignIn.php");
         } else {
