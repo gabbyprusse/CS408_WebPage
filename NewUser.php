@@ -16,7 +16,6 @@
     require_once "header.php";
 
     echo print_r($_POST, 1);
-    echo print_r($_GET, 1);
     echo print_r($_SESSION, 1);
 
         if (isset($_SESSION['errors_newuser'])) {
