@@ -37,7 +37,7 @@ $dao = new Dao();
 
         $_SESSION["errors_signin"] = $errors;
         if (count($_SESSION['errors_signin']) > 0) {
-            ?> <div> <?php count($_SESSION['errors_signin'])?></div> <?php
+            ?> <div> Num errors: <?php count($_SESSION['errors_signin'])?></div> <?php
                 $_SESSION['authenticated'] = false;
                 header("Location: ../SignIn.php");
         } else {
