@@ -49,8 +49,8 @@ session_start();
                 $dao->setUser($user, $pwd, $goal);
                 $_SESSION['yes'] = true;
                 //$_SESSION['userId'] = $result['id'];
-                $_SESSION['user_username'] = $_POST($user);
-                $_SESSION['goal'] = $_POST($goal);
+                $_SESSION['user'] = $user;
+                $_SESSION['goal'] = $goal;
                 header('Location: Profile.php');
 
             } else {
