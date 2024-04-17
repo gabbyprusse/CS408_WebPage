@@ -30,10 +30,7 @@ class Dao
             (:username, :pwd, :goal);";
         $stmt = $conn->prepare($query);
 
-        $options = [
-            'cost' => 12
-        ];
-        $hashpwd = password_hash($pwd, PASSWORD_BCRYPT, $options);
+        $hashpwd = password_hash($pwd, PASSWORD_BCRYPT);
 
         // escapes injection
         $stmt->bindParam(":username", $user);
