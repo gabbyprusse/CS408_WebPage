@@ -11,6 +11,10 @@
 <body>
 
 <?php
+// check for authentication
+if (!isset($_SESSION['yes']) && $_SESSION['yes']) {
+    header('Location: SignIn.php');
+}
 require_once 'header.php';
 
 ///////??????????
@@ -18,11 +22,7 @@ require_once 'header.php';
 /// repopulate on errors
 /// print in javascript
 /// jquery or ajax for errors
-
-// check for authentication
-if (!isset($_SESSION['yes']) && $_SESSION['yes']) {
-    header('Location: SignIn.php');
-}
+///
 require_once 'Dao.php';
 
 ?>
