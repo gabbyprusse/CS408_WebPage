@@ -3,6 +3,7 @@
 <footer>
     <p>Here is the end of the page</p>
     <p>Copyright 2024 Gabby Prusse</p>
+    <p>(This is a Google font btw)</p>
 </footer>
 
 </html>
