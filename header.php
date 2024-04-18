@@ -6,6 +6,16 @@ ini_set('display_errors', 'On'); ?>
 </head>
 <body>
 <h1 id="title">Running from My Problems ...<img src="img.png" alt="cool pic"></h1>
+<?php session_start();
+
+$get_url = $_SERVER['REQUEST_URI'];
+$get_url = str_replace(".php", "", $_SERVER['REQUEST_URI']);
+
+?>
+<!-- HW7: Persistent nav  -->
+<script>
+    $("#" + '<?php echo $get_url ?>').addClass('active');
+</script>
 
     <ul class="MainPage">
         <li id="main"><a href="index.php">Home</a> </li>
@@ -21,13 +31,4 @@ ini_set('display_errors', 'On'); ?>
         </li>
         <li id="About"><a href="About.php">Benefits of Running</a></li>
     </ul>
-<?php session_start();
 
-$get_url = $_SERVER['REQUEST_URI'];
-$get_url = str_replace(".php", "", $_SERVER['REQUEST_URI']);
-
-?>
-<!-- HW7: Persistent nav  -->
-<script>
-    $("#" + '<?php echo $get_url ?>').addClass('active');
-</script>
