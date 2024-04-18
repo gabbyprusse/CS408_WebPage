@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
