@@ -10,7 +10,9 @@ require_once "Dao.php";
 // accepts boolean and array parameter types
 function validateUsername($user, $result): bool
 {
-    if (strcmp($result, $user) == 0) {
+    // username reg expression : no white space
+    $pattern = "/\s/";
+    if (strcmp($result, $user) == 0 || preg_match($pattern, $_POST['username']) == null) {
         return true;
     } else {
         return false;
