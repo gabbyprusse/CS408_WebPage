@@ -62,6 +62,7 @@ strong, .benefits, .profileTitle {
 }
 
 footer {
+    font-size: 14px;
     font-family: "Reenie Beanie", cursive;
     text-align: center;
     padding: 3px;
