@@ -3,13 +3,17 @@ body {
     margin-left: 15px;
 }
 #title{
-    text-shadow: 3px 3px 3px;
+    text-shadow: #f3cbc8 2px 2px 2px ;
 }
 
 h1 {
     font-family: Didot, serif;
     margin: 30px;
     color: #885c39;
+}
+
+#active {
+    color: lightcoral;
 }
 
 img {

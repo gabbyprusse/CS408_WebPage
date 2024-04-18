@@ -2,10 +2,18 @@ body {
     color: #885c39;
     background-color: #FEFEFE;
 }
+#title{
+    text-shadow: #f3cbc8 2px 2px 2px ;
+}
+
 h1 {
     font-family: Didot, serif;
     margin: 30px;
     color: #885c39;
+}
+
+#active {
+    color: lightcoral;
 }
 
 h2 {

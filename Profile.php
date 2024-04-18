@@ -80,6 +80,7 @@ require_once 'Dao.php';
         document.body.innerHTML = printContent;
         window.print();
         document.body = ogContent;
+        w.close();
         <?php header("Location: Profile.php"); ?>
     }
 </script>
