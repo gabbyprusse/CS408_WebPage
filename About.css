@@ -7,6 +7,10 @@ h1 {
     color: #885c39;
 }
 
+#active {
+    color: lightcoral;
+}
+
 img {
     float: right;
 }
