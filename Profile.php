@@ -18,7 +18,6 @@ require_once 'header.php';
 /// repopulate on errors
 /// print in javascript
 /// jquery or ajax for errors
-/// google font
 
 // check for authentication
 if (!isset($_SESSION['yes']) && $_SESSION['yes']) {

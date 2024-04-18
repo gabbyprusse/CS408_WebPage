@@ -26,7 +26,7 @@
 
     <form action='newUserHandler.php' method="POST">
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" value="<?php echo isset($_POST['username']) ? $_POST['username'] : '' ?>"/><br>
+        <input type="text" id="username" name="username" value="<?php echo $_POST['username'] ?? '' ?>"/><br>
 
         <label for="pwd">Password:</label><br>
         <input type="password" id="pwd" name="pwd" placeholder="shhhhhh"><br><br>
