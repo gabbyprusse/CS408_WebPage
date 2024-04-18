@@ -5,12 +5,14 @@
     "license": "Apache-2.0",
     "autoload": {
         "psr-4": {
-            "Gabbyprusse\\Cs408\\": "src/"
+            "Gabbyprusse\\Cs408\\": "/src"
         }
     },
+    "minimum-stability": "dev",
     "require": {},
     "post-install-cmd": [
     "php artisan clear-compiled",
     "chmod -R 777 public/"
 ]
 }
+

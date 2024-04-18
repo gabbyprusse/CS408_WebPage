@@ -13,7 +13,6 @@
     <?php require_once "header.php";
     error_reporting(-1);
     ini_set('display_errors', 'On');
-    $_SESSION['yes'] = false;
     ?>
     <h3>Starting a running routine when you're new to running can be both exciting and challenging.
     Here's a step-by-step guide to help you get started safely and effectively.</h3>
