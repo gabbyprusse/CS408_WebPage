@@ -1,4 +1,8 @@
 
+<?php
+error_reporting(-1);
+ini_set('display_errors', 'On'); ?>
+
 </head>
 <body>
 <h1 id="title">Running from My Problems ...<img src="img.png" alt="cool pic"></h1>
@@ -17,6 +21,4 @@
         </li>
         <li><a href="About.php">Benefits of Running</a></li>
     </ul>
-  <?php
-  error_reporting(-1);
-  ini_set('display_errors', 'On'); ?>
+<?php session_start();?>

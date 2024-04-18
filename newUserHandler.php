@@ -1,5 +1,7 @@
 <?php
-session_start();
+        if (session_id() == false) {
+            session_start();
+        }
 
         // ERROR HANDLERS
         $errors = [];

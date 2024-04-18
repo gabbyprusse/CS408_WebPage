@@ -12,9 +12,6 @@
 
 <?php
 require_once 'header.php';
-//if (session_id() == "") {
-//    session_start();
-//}
 
 ///////??????????
 /// todo:

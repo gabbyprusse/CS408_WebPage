@@ -1,6 +1,7 @@
 <?php
-session_start();
-
+if (session_id() == false) {
+    session_start();
+}
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
 
