@@ -6,4 +6,4 @@ $_SESSION['yes'] = false;
 session_destroy();
 header("Location: ../index.php");
 exit();
-?>
+
