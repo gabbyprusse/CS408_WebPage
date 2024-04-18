@@ -12,10 +12,19 @@
 <body>
 <?php
     require_once "header.php";
-    require_once 'Dao.php';
+    require_once 'Dao.php'; ?>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").onsubmit(function(){
+    $("#error").fadeOut(3000);
+  });
+});
+</script>
+<?php
     if (isset($_SESSION['errors_signin'])) {
+
         foreach ($_SESSION['errors_signin'] as $error) {
             echo "<div class='error'>{$error}</div>";
         }
