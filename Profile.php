@@ -37,7 +37,7 @@ require_once 'Dao.php';
 </div>
 
 
-<input type="button" onclick="printPlan('tabL')" value="Print your Plan"/>
+<input type="button" onclick=printPlan('tabL') value="Print your Plan"/>
 
 <div id="tabL">
 <table id="plan">
