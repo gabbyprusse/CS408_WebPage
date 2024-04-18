@@ -13,7 +13,7 @@
 <?php
 // check for authentication
 // !isset($_SESSION['yes']) &&
-if (!$_SESSION['yes']) {
+if ($_SESSION['yes']) {
     header('Location: SignIn.php');
 }
 require_once 'header.php';
