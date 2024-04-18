@@ -18,6 +18,11 @@ ul {
     background-color:#fef2ec ;
 }
 
+.text {
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
 li {
     font-family: Didot, serif;
     margin: 10px;

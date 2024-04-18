@@ -14,6 +14,7 @@
 
 error_reporting(-1);
 ini_set('display_errors', 'On'); ?>
+<div class="text">
 <h1 class="benefits">Benefits of Running</h1>
 <p>
     Running offers a multitude of benefits for both physical and mental health. Here are some of them: <br>
@@ -43,6 +44,7 @@ ini_set('display_errors', 'On'); ?>
 
 <h1>We are here to help you run!
     <br>(because it can suck sometimes)</h1>
+</div>
 
 </body>
 <?php require_once "footer.php"; ?>
