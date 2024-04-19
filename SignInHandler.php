@@ -1,6 +1,9 @@
 <?php
 require_once 'Dao.php';
 require_once 'SIcontrol.php';
+if (!session_id()) {
+    session_start();
+}
 
 $dao = new Dao();
 

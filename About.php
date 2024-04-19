@@ -11,6 +11,9 @@
 </head>
 <body>
 <?php require_once "header.php";
+if (!session_id()) {
+    session_start();
+}
 
 error_reporting(-1);
 ini_set('display_errors', 'On'); ?>

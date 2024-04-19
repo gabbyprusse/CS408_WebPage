@@ -11,6 +11,9 @@
 <body>
 
 <?php
+if (!session_id()) {
+    session_start();
+}
 // check for authentication
 if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
