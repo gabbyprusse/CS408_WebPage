@@ -10,12 +10,12 @@ ini_set('display_errors', 'On'); ?>
 <?php
 
 $get_url = $_SERVER['REQUEST_URI'];
-$get_url = str_replace(".php", "", $_SERVER['REQUEST_URI']);
+$curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
 
 ?>
 <!-- HW7: Persistent nav  -->
 <script>
-    $("#" + '<?php echo $get_url ?>').addClass('active');
+    $("#" + '<?php echo $curClass ?>').addClass('active');
 </script>
 
     <ul class="MainPage">
