@@ -12,7 +12,6 @@
 
 <?php
 // check for authentication
-// !isset($_SESSION['yes']) &&
 if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
 }
