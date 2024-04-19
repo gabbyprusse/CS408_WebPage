@@ -15,6 +15,8 @@ $dao = new Dao();
         // empty input
         if (user_empty($user)){
             $errors["emptyUser"] = "Fill in username";
+        } else {
+            $_SESSION['user'] = $user;
         }
         // empty input
         if (pwd_empty($pwd)){
@@ -25,10 +27,12 @@ $dao = new Dao();
         // checks if user has a profile
         if ($result["pwd"] == null || $result["username"] == null) {
             $errors["noProfile"] = "Incorrect login";
+            $_SESSION['user'] = null;
             // checks if user and pwd are valid
         } else if (!validatePwd($pwd, $result['pwd']) || !validateUsername($user, $result['username'])) {
             $errors["login_incorrect"] = "Incorrect login";
         }
+        $_SESSION['user'] = $user;
 
         $_SESSION["errors_signin"] = $errors;
         if (count($_SESSION['errors_signin']) == 0) {

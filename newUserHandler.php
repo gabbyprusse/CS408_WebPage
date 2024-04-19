@@ -9,12 +9,17 @@ if (!session_id()) {
         $user = htmlspecialchars($_POST['username'], ENT_QUOTES, 'UTF-8');
         if (0 == strlen($user)){
             $errors["emptyUser"] = "Fill in Username";
+        } else {
+            $_SESSION['user'] = $user;
         }
 
         // username reg expression : no white space
         $pattern = "/\s/";
         if (preg_match($pattern, $_POST['username']) != null) {
             $errors['invalidUsername'] = "Username must be one word";
+            $_SESSION['user'] = null;
+        } else {
+            $_SESSION['user'] = $user;
         }
 
     // pwd reg expression : pwd needs a num in it
@@ -40,6 +45,9 @@ if (!session_id()) {
             // duplicated username
             if ($dao->getUsername($user) != null) {
                 $errors["usedUsername"] = "Username already taken";
+                $_SESSION['user'] = null;
+            } else {
+                $_SESSION['user'] = $user;
             }
 
             $_SESSION['errors_newuser'] = $errors;
