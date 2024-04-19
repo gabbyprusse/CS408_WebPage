@@ -34,10 +34,8 @@ if (!session_id()) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  $("#error").onload(function(){
     $("#error").fadeOut(3000);
   });
-});
 </script>
 <?php
     if (isset($_SESSION['errors_signin'])) {
