@@ -38,21 +38,18 @@ require_once 'Dao.php';
     <em>Consistency is the key to achieving your goals!</em>
 </div>
 
-<SCRIPT LANGUAGE="JavaScript">
-    // HW7
-    function printPlan(areaID) {
-        var printContent = document.getElementById(areaID).innerHTML;
-        var ogContent = document.body.innerHTML;
-        document.body.innerHTML = printContent;
-        window.print();
-        document.body = ogContent;
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        w=window.open();
+        w.document.write(printContents);
+        w.print();
         w.close();
-        <?php header("Location: Profile.php"); ?>
     }
 </script>
 
 
-<input type="button" onclick=printPlan('tabL') value="Print your Plan"/>
+<input type="button" onclick=printDiv('tabL') value="Print your Plan"/>
 
 <div id="tabL">
 <table id="plan">
