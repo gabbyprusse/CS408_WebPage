@@ -1,12 +1,14 @@
 
+</head>
+<body>
 <?php
 error_reporting(-1);
 ini_set('display_errors', 'On'); ?>
 
-</head>
-<body>
+<?php session_start(); ?>
+
 <h1 id="title">Running from My Problems ...<img src="img.png" alt="cool pic"></h1>
-<?php session_start();
+<?php
 
 $get_url = $_SERVER['REQUEST_URI'];
 $get_url = str_replace(".php", "", $_SERVER['REQUEST_URI']);
