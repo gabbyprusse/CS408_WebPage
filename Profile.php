@@ -33,14 +33,8 @@ $curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
     }
 </script>
 
-///////??????????
-/// todo:
-/// repopulate on errors
 /// jquery or ajax for errors
 
-require_once 'Dao.php';
-
-?>
 <div>
     <h1>Welcome, <?php echo $_SESSION['user']?></h1>
     <h2>Here is your running plan!</h2>
