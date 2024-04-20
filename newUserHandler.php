@@ -62,7 +62,7 @@ if (!session_id()) {
                 header('Location: Profile.php');
 
             } else {
-                header('Location: newUser.php');
+                header('Location: NewUser.php');
 
             }
 
