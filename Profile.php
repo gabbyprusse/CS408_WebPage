@@ -19,6 +19,7 @@ if (!isset($_SESSION['yes'])) {
     header('Location: SignIn.php');
 }
 require_once "header.php";
+require_once "Dao.php";
 
 $get_url = $_SERVER['REQUEST_URI'];
 $curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
@@ -35,9 +36,7 @@ $curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
 ///////??????????
 /// todo:
 /// repopulate on errors
-/// print in javascript
 /// jquery or ajax for errors
-///
 
 require_once 'Dao.php';
 
