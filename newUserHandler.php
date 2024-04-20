@@ -2,7 +2,6 @@
 if (!session_id()) {
     session_start();
 }
-
         // ERROR HANDLERS
         $errors = [];
         // no username entered
