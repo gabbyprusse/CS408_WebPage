@@ -40,12 +40,12 @@ li.steps {
     margin: 20px;
 }
 
-#SignIn {
-    color: lightcoral;
-}
-
 a {
     color: #885c39;
+}
+
+a#SignIn {
+    color: lightcoral;
 }
 
 h3, h4, h5 {
