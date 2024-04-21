@@ -73,7 +73,7 @@ h3, h4, h5 {
     text-align: center;
 }
 
-.footer {
+.footer, footer {
     font-size: 14px;
     font-family: "Reenie Beanie", cursive;
     text-align: center;
