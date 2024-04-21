@@ -12,14 +12,6 @@
 <body>
 <?php require_once "header.php"; ?>
 
-<!-- HW7: Persistent nav  -->
-<script>
-    let currentId = document.querySelectorAll('#About');
-    if (currentId) {
-        currentId.style.color = '#ec7f7f';
-    }
-</script>
-
 <?php
 if (!session_id()) {
     session_start();
@@ -51,9 +43,6 @@ ini_set('display_errors', 'On'); ?>
     <p><strong>Longevity:</strong> Studies suggest that regular runners may live longer than non-runners, possibly due to the overall health benefits associated with the activity. </p>
     <p class="reminder">Remember, it's essential to start gradually and listen to your body to prevent injury and enjoy the benefits of running safely.
     </p>
-
-
-
 
 <h1>We are here to help you run!
     <br>(because it can suck sometimes)</h1>

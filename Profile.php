@@ -23,15 +23,6 @@ require_once "Dao.php";
 
 ?>
 
-<script>
-    let currentId = document.querySelectorAll('#SignIn');
-    if (currentId) {
-        currentId.style.color = '#ec7f7f';
-    }
-</script>
-
-
-
 <div>
     <h1>Welcome, <?php echo $_SESSION['user']?></h1>
     <h2>Here is your running plan!</h2>

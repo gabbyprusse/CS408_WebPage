@@ -12,14 +12,6 @@
 <body>
     <?php require_once "header.php"; ?>
 
-    <!-- HW7: Persistent nav  -->
-    <script>
-        let currentId = document.querySelectorAll('#main');
-        if (currentId) {
-            currentId.style.color = '#ec7f7f';
-        }
-    </script>
-
     <?php
     error_reporting(-1);
     ini_set('display_errors', 'On');

@@ -13,14 +13,6 @@
     <body>
     <?php require_once "header.php"; ?>
 
-    <!-- HW7: Persistent nav  -->
-    <script>
-        let currentId = document.querySelectorAll('#SignIn');
-        if (currentId) {
-            currentId.style.color = '#ec7f7f';
-        }
-    </script>
-
     <?php
     require_once 'Dao.php';
     if (!session_id()) {
