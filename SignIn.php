@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="ErrorHandler.js"></script>
     <meta charset="UTF-8">
     <title>Sign In</title>
   <link rel="icon" href="favicon.png">
@@ -31,12 +33,8 @@ if (!session_id()) {
 }
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#error").fadeOut(3000);
-  });
-</script>
+
+
 <?php
     if (isset($_SESSION['errors_signin'])) {
 
