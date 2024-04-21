@@ -49,7 +49,7 @@ require_once "Dao.php";
 
 
 <input id="printer" type="button" onclick=printDiv('tabL') value="Print your Plan"/>
-
+<br>
 <div id="tabL">
 <table id="plan">
     <thead>
@@ -77,18 +77,14 @@ require_once "Dao.php";
         <td>{$line['saturday']}</td>
         <td>{$line['sunday']}</td></tr>";
     }
-
     ?>
 </table>
 </div>
-</body>
-
-
-
-
 <div class="logout">
 <form action="logout.php" method="post">
     <button class="button">Log out</button>
 </form>
 </div>
+<?php require_once 'footer.php' ?>
+</body>
 
