@@ -12,9 +12,6 @@ h1 {
     color: #885c39;
 }
 
-#active {
-    color: lightcoral;
-}
 
 h2 {
     margin-left: 35px;
@@ -96,7 +93,7 @@ tr:nth-child(even){background-color: mistyrose;}
 
 tr:hover {background-color: #f3b9b4;}
 
-.button {
+.button, #printer {
     border-radius: 12px;
     padding: 10px 24px;
     color: lightcoral;
