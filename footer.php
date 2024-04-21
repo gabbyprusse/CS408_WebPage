@@ -1,9 +1,9 @@
 <! FOOTER >
 <html lang="en">
 <footer>
-    <p>Here is the end of the page</p>
-    <p>Copyright 2024 Gabby Prusse</p>
-    <p>(This is a Google font btw)</p>
+    <p class="footer">Here is the end of the page</p>
+    <p class="footer">Copyright 2024 Gabby Prusse</p>
+    <p class="footer">(This is a Google font btw)</p>
 </footer>
 
 </html>
