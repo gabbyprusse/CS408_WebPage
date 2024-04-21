@@ -11,10 +11,6 @@ h1 {
     color: #885c39;
 }
 
-#About {
-    color: lightcoral;
-}
-
 img {
     float: right;
 }
@@ -48,6 +44,10 @@ li.steps {
 
 a{
     color: #885c39;
+}
+
+#About {
+    color: lightcoral;
 }
 
 p {

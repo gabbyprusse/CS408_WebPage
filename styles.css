@@ -11,9 +11,7 @@ h1 {
     color: #885c39;
 }
 
-#main {
-    color: lightcoral;
-}
+
 
 img {
     float: right;
@@ -34,6 +32,10 @@ li {
     display: block;
     text-align: center;
     padding: 16px;
+}
+
+#main {
+    color: lightcoral;
 }
 
 li.steps {

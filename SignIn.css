@@ -13,10 +13,6 @@ h1 {
     color: #885c39;
 }
 
-#SignIn {
-    color: lightcoral;
-}
-
 img {
     float: right;
 }
@@ -41,6 +37,10 @@ li {
 li.steps {
     text-align: left;
     margin: 20px;
+}
+
+#SignIn {
+    color: lightcoral;
 }
 
 a {
