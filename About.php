@@ -11,9 +11,13 @@
 </head>
 <body>
 <?php require_once "header.php"; ?>
+
 <!-- HW7: Persistent nav  -->
 <script>
-    document.getElementById("About").style.color = "mistyrose";
+    let currentClass = document.querySelector('.About');
+    if (currentClass) {
+        currentClass.style.color = '#ec7f7f';
+    }
 </script>
 
 <?php

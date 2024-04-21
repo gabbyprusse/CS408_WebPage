@@ -24,7 +24,10 @@ require_once "Dao.php";
 ?>
 
 <script>
-    document.getElementById("SignIn").style.color = "mistyrose";
+    let currentClass = document.querySelector('.SignIn');
+    if (currentClass) {
+        currentClass.style.color = '#ec7f7f';
+    }
 </script>
 
 

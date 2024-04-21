@@ -18,7 +18,10 @@ require_once "header.php";
 ?>
 <!-- HW7: Persistent nav  -->
 <script>
-    document.getElementById("SignIn").style.color = "mistyrose";
+    let currentClass = document.querySelector('.SignIn');
+    if (currentClass) {
+        currentClass.style.color = '#ec7f7f';
+    }
 </script>
 <?php
     require_once 'Dao.php';

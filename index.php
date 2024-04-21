@@ -14,7 +14,10 @@
 
     <!-- HW7: Persistent nav  -->
     <script>
-        document.getElementById("main").style.color = "mistyrose";
+        let currentClass = document.querySelector('.main');
+        if (currentClass) {
+            currentClass.style.color = '#ec7f7f';
+        }
     </script>
 
     <?php
