@@ -10,18 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 </head>
 <body>
-<?php require_once "header.php";
-
-$get_url = $_SERVER['REQUEST_URI'];
-$curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
-
-?>
+<?php require_once "header.php"; ?>
 <!-- HW7: Persistent nav  -->
 <script>
-    let currentClass = document.querySelector('<?php echo $curClass?>');
-    if (currentClass) {
-        currentClass.style.color = 'mistyrose';
-    }
+    document.getElementById("About").style.color = "mistyrose";
 </script>
 
 <?php

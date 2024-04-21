@@ -21,19 +21,13 @@ if (!isset($_SESSION['yes'])) {
 require_once "header.php";
 require_once "Dao.php";
 
-$get_url = $_SERVER['REQUEST_URI'];
-$curClass = str_replace(".php", "", $_SERVER['REQUEST_URI']);
-
 ?>
-<!-- HW7: Persistent nav  -->
+
 <script>
-    let currentClass = document.querySelector('<?php echo $curClass?>');
-    if (currentClass) {
-        currentClass.style.color = 'mistyrose';
-    }
+    document.getElementById("SignIn").style.color = "mistyrose";
 </script>
 
-/// jquery or ajax for errors
+
 
 <div>
     <h1>Welcome, <?php echo $_SESSION['user']?></h1>
