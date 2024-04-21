@@ -20,7 +20,7 @@ require_once "header.php";
 <script>
     let currentClass = document.querySelectorAll('.SignIn');
     if (currentClass) {
-        currentClass.style.color = '#ec7f7f';
+        currentClass[0].style.color = '#ec7f7f';
     }
 </script>
 <?php

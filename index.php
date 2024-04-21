@@ -16,7 +16,7 @@
     <script>
         let currentClass = document.querySelectorAll('.main');
         if (currentClass) {
-            currentClass.style.color = '#ec7f7f';
+            currentClass[0].style.color = '#ec7f7f';
         }
     </script>
 
