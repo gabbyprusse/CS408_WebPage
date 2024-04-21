@@ -14,7 +14,7 @@
 
 <!-- HW7: Persistent nav  -->
 <script>
-    let currentClass = document.querySelector('.About');
+    let currentClass = document.querySelectorAll('.About');
     if (currentClass) {
         currentClass.style.color = '#ec7f7f';
     }

@@ -18,7 +18,7 @@ require_once "header.php";
 ?>
 <!-- HW7: Persistent nav  -->
 <script>
-    let currentClass = document.querySelector('.SignIn');
+    let currentClass = document.querySelectorAll('.SignIn');
     if (currentClass) {
         currentClass.style.color = '#ec7f7f';
     }

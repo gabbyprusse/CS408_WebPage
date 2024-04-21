@@ -15,7 +15,10 @@
 
     <!-- HW7: Persistent nav  -->
     <script>
-        document.getElementById("SignIn").style.color = "mistyrose";
+        let currentClass = document.querySelectorAll('.SignIn');
+        if (currentClass) {
+            currentClass.style.color = '#ec7f7f';
+        }
     </script>
 
     <?php
